@@ -8,8 +8,9 @@
 import Foundation
 import AVFoundation
 import AudioToolbox
+import AVFAudio
 
-@objc enum CMAudioPlayState: Int {
+@objc public enum LRAudioPlayState: Int {
     case failure
     case playing
     case stoped
@@ -20,14 +21,14 @@ import AudioToolbox
 public class LRAudioPlayer: NSObject {
     static let shared: LRAudioPlayer = LRAudioPlayer()
     private(set) var currentUrl: String?
-    private(set) var playState: CMAudioPlayState = .finished
+    private(set) var playState: LRAudioPlayState = .finished
     fileprivate var player: AVPlayer?
     fileprivate var timeObserver: NSObjectProtocol?
     fileprivate var statusObserver: NSObjectProtocol?
     fileprivate var progress: ((_ progress: CGFloat)->Void)?
-    fileprivate var completionHandler: ((_ state: CMAudioPlayState, _ msg: String?)->Void)?
+    fileprivate var completionHandler: ((_ state: LRAudioPlayState, _ msg: String?)->Void)?
     
-    public func playAudio(_ urlString: String, progress: ((_ progress: CGFloat)->Void)?, completionHandler: ((_ state: CMAudioPlayState, _ msg: String?)->Void)?) {
+    public func playAudio(_ urlString: String, progress: ((_ progress: CGFloat)->Void)?, completionHandler: ((_ state: LRAudioPlayState, _ msg: String?)->Void)?) {
         if let url = self.currentUrl, url != urlString {
             self.stopPlay()
         }
@@ -77,9 +78,9 @@ public class LRAudioPlayer: NSObject {
             @unknown default: break
             }
         })
-        self.timeObserver = self.player?.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: 1), queue: DispatchQueue.main, using: {[weak self, weak player] time in
+        self.timeObserver = self.player?.addPeriodicTimeObserver(forInterval: CMTime(value: 1, timescale: 1), queue: DispatchQueue.main, using: {[weak self, weak player] time in
             let current = CMTimeGetSeconds(time)
-            let total = CMTimeGetSeconds(player?.currentItem?.duration ?? CMTimeMake(value: 1, timescale: 1))
+            let total = CMTimeGetSeconds(player?.currentItem?.duration ?? CMTime(value: 1, timescale: 1))
             let p = current / total
             self?.progress?(p)
             if p == 1 {
@@ -118,9 +119,9 @@ public class LRAudioPlayer: NSObject {
         }
     }
     
-    fileprivate func changePlayState(_ state: CMAudioPlayState) {
+    fileprivate func changePlayState(_ state: LRAudioPlayState) {
         self.playState = state
-        debugPrint("LRAudioPlayer - changePlayState - \(state)")
+        print("LRAudioPlayer - changePlayState - \(state)")
     }
     
     deinit {

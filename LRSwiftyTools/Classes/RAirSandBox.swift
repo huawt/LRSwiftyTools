@@ -255,7 +255,7 @@ public class RAirSandBoxSwift: NSObject {
         window.layer.borderColor = RAirSandBoxConstant.kASThemeColor.cgColor
         window.layer.borderWidth = 2.0
 
-        window.windowLevel = .statusBar
+        window.windowLevel = UIWindow.Level(rawValue: 1000)
         window.rootViewController = viewController
 
         return window

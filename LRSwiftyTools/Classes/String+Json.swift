@@ -23,12 +23,12 @@ extension Dictionary {
 // MARK: 字符串转字典
 extension String {
     func toDictionary() -> [String : Any] {
-        var result = [String : Any]()
+        var result: [String : Any] = [:]
         guard !self.isEmpty else { return result }
         guard let dataSelf = self.data(using: .utf8) else {
             return result
         }
-        if let dic = try? JSONSerialization.jsonObject(with: dataSelf, options: .mutableContainers) as? [String : Any] {
+        if let dic = try? JSONSerialization.jsonObject(with: dataSelf, options: .mutableContainers) as? [String : Any] ?? [:] {
             result = dic
         }
         return result

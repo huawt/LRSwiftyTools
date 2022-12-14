@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 import QuartzCore
 
 public enum LRTabBarItemAnimationType: Int {
@@ -43,7 +44,7 @@ public class LRBaseTabBarController: UITabBarController, UITabBarControllerDeleg
     }()
     var itemAniamtionType: LRTabBarItemAnimationType = .none
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         
@@ -68,7 +69,7 @@ public class LRBaseTabBarController: UITabBarController, UITabBarControllerDeleg
             self.tabBar.backgroundColor = UIColor.white
             UITabBarItem.appearance().setTitleTextAttributes(normal, for: .normal)
             UITabBarItem.appearance().setTitleTextAttributes(selected, for: .selected)
-            self.tabBar.backgroundImage = UIImage.image(color: .clear, size: CGSize(width: kWidth, height: kTabBarH))
+            self.tabBar.backgroundImage = UIImage.image(color: .clear, size: CGSize(width: LRWidth, height: LRTabBarHeight))
             self.tabBar.shadowImage = UIImage.image(color: .clear)
         }
         
@@ -80,13 +81,13 @@ public class LRBaseTabBarController: UITabBarController, UITabBarControllerDeleg
         itemAppearance.selected.titleTextAttributes = selected
     }
     
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+    public func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if let index = tabBarController.viewControllers?.firstIndex(of: viewController), index != NSNotFound {
             self.animate(index: index)
         }
         return true
     }
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+    public override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         guard let index = tabBar.items?.firstIndex(of: item), index != NSNotFound, self.selectedIndex == index else { return }
         self.reSelectHandler?(index)
     }
