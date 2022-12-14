@@ -1,9 +1,9 @@
 {
   "name": "LRSwiftyTools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "A short description of LRSwiftyTools.",
   "description": "A short description of LRSwiftyTools.",
-  "homepage": "https://github.com/WinTer/LRSwiftyTools",
+  "homepage": "https://github.com/huawt/LRSwiftyTools",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "huawt": "ghost263sky@163.com"
   },
   "source": {
-    "git": "https://github.com/WinTer/LRSwiftyTools.git",
-    "tag": "0.0.1"
+    "git": "https://github.com/huawt/LRSwiftyTools.git",
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "12.0"
