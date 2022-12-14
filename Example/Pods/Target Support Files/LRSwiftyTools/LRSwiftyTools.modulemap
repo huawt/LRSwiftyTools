@@ -1,0 +1,6 @@
+framework module LRSwiftyTools {
+  umbrella header "LRSwiftyTools-umbrella.h"
+
+  export *
+  module * { export * }
+}
