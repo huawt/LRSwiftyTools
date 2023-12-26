@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Array where Element: Hashable {
+public extension Array where Element: Hashable {
     var unique: [Element] {
         var uniq = Set<Element>()
         uniq.reserveCapacity(self.count)
@@ -17,7 +17,7 @@ extension Array where Element: Hashable {
     }
 }
 
-extension Array where Element: Any {
+public extension Array where Element: Any {
     func shuffle() -> Self {
         guard self.count > 1 else { return self }
         var temp = self
@@ -31,8 +31,8 @@ extension Array where Element: Any {
     }
 }
 
-extension Array {
-    public mutating func removeFirst(_ k: Int) -> Self {
+public extension Array {
+    mutating func removeFirst(_ k: Int) -> Self {
         if self.count < k {
             let array = self
             self.removeAll()

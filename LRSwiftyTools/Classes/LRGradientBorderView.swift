@@ -7,19 +7,19 @@
 
 import UIKit
 
-class LRGradientBorderView: UIView {
-    var isGradientBorderEnable: Bool = false
-    @IBInspectable var startColor: UIColor = UIColor.clear
-    @IBInspectable var endColor: UIColor = UIColor.clear
-    @IBInspectable var startPoint: CGPoint = CGPoint.zero
-    @IBInspectable var endPoint: CGPoint = CGPoint.zero
-    @IBInspectable var locations: CGPoint = CGPoint.zero
-    @IBInspectable var borderWidth: CGFloat = 0 {
+public class LRGradientBorderView: UIView {
+    public var isGradientBorderEnable: Bool = false
+    @IBInspectable public var startColor: UIColor = UIColor.clear
+    @IBInspectable public var endColor: UIColor = UIColor.clear
+    @IBInspectable public var startPoint: CGPoint = CGPoint.zero
+    @IBInspectable public var endPoint: CGPoint = CGPoint.zero
+    @IBInspectable public var locations: CGPoint = CGPoint.zero
+    @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             self.shapeLayer.borderWidth = borderWidth
         }
     }
-    @IBInspectable var gCornerRadius: CGFloat {
+    @IBInspectable public var gCornerRadius: CGFloat {
         set {
             self.layer.cornerRadius = newValue
         }
@@ -28,18 +28,18 @@ class LRGradientBorderView: UIView {
         }
     }
     
-    var customLocations: [NSNumber] = []
-    var customColors: [UIColor] = []
+    public var customLocations: [NSNumber] = []
+    public var customColors: [UIColor] = []
     
     fileprivate var gradientLayer: CAGradientLayer = CAGradientLayer()
     fileprivate var shapeLayer: CAShapeLayer = CAShapeLayer()
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         guard self.isGradientBorderEnable else { return }
         self.layer.setNeedsDisplay()
     }
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         super.draw(rect)
         CATransaction.begin()
         CATransaction.setDisableActions(true)

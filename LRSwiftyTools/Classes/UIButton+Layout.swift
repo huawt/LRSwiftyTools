@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-class UILayoutButton: UIButton {
-    override func layoutSubviews() {
+public class UILayoutButton: UIButton {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         self.resetLayoutStyle()
     }
 }
 
-enum UIButtonLayoutStyle: Int {
+public enum UIButtonLayoutStyle: Int {
     case leftImageRightTitle = 0
     case leftTitleRightImage
     case upImageDownTitle
@@ -37,7 +37,7 @@ extension UIButton {
         }
     }
 
-    var layoutStyle: UIButtonLayoutStyle {
+    public var layoutStyle: UIButtonLayoutStyle {
         get {
             return objc_getAssociatedObject(self, &_AssociatedKeys.styleKey) as? UIButtonLayoutStyle ?? .leftImageRightTitle
         }
@@ -46,7 +46,7 @@ extension UIButton {
         }
     }
     
-    func resetLayoutStyle() {
+    public func resetLayoutStyle() {
         guard let image = self.imageView, let title = self.titleLabel else { return }
         image.sizeToFit()
         title.sizeToFit()

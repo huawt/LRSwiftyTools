@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: 字典转字符串
-extension Dictionary {
+public extension Dictionary {
     func toJsonString() -> String? {
         guard let data = try? JSONSerialization.data(withJSONObject: self, options: []) else {
             return nil
@@ -21,7 +21,7 @@ extension Dictionary {
 }
 
 // MARK: 字符串转字典
-extension String {
+public extension String {
     func toDictionary() -> [String : Any] {
         var result: [String : Any] = [:]
         guard !self.isEmpty else { return result }

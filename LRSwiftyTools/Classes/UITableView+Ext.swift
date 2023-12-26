@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UITableView {
-    @objc func modifySwipe(fontSize: CGFloat = 10) {
+    @objc public func modifySwipe(fontSize: CGFloat = 10) {
         guard let font: UIFont = UIFont(name: "PingFangSC-Medium", size: fontSize) else { return }
         if #available(iOS 13.0, *) {
             for subview in self.subviews {

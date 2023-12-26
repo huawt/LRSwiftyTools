@@ -242,7 +242,7 @@ extension RSViewController: UITableViewDataSource {
 // ************** RAirSandBoxSwift ***************
 public class RAirSandBoxSwift: NSObject {
   public static let shared = RAirSandBoxSwift()
-
+    var swipeGest: UISwipeGestureRecognizer?
     lazy var window: UIWindow = {
         let window = UIWindow()
         var keyFrame = UIScreen.main.bounds
@@ -267,6 +267,12 @@ public class RAirSandBoxSwift: NSObject {
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(onSwipeDetected(gs:)))
         swipeGesture.numberOfTouchesRequired = 1
         UIApplication.shared.keyWindow?.addGestureRecognizer(swipeGesture)
+        swipeGest = swipeGesture
+    }
+    public func disableSwipe() {
+        if let swipeGest = swipeGest, let view = swipeGest.view {
+            view.removeGestureRecognizer(swipeGest)
+        }
     }
 
     public func showSandboxBrowser () {

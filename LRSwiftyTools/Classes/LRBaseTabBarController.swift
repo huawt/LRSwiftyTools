@@ -23,7 +23,7 @@ public class LRBaseTabBarController: UITabBarController, UITabBarControllerDeleg
     private let selected: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(red: 236/255.0, green: 95/255.0, blue: 177/255.0, alpha: 1.0)]
     
     
-    var reSelectHandler:((_ index: Int)->Void)?
+    public var reSelectHandler:((_ index: Int)->Void)?
     
     private lazy var imageViews: [UIImageView] = {
         var views: [UIImageView] = []
@@ -42,7 +42,7 @@ public class LRBaseTabBarController: UITabBarController, UITabBarControllerDeleg
         }
         return views
     }()
-    var itemAniamtionType: LRTabBarItemAnimationType = .none
+    public var itemAniamtionType: LRTabBarItemAnimationType = .none
     
     public override func viewDidLoad() {
         super.viewDidLoad()
