@@ -1,7 +1,7 @@
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
 	/**
 	 Registers a UITableViewCell for use in a UITableView.
 

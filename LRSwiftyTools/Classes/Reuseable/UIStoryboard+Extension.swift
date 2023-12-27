@@ -3,7 +3,7 @@
 import Foundation
 import UIKit
 
-extension UIStoryboard {
+public extension UIStoryboard {
 	/// Instantiate a UIViewController using its identifier
 	///
 	/// - Parameters:
@@ -23,13 +23,13 @@ extension UIStoryboard {
 	}
 }
 
-extension UINib {
+public extension UINib {
     func nibView<T: UIView>() -> T {
         return instantiate(withOwner: T.self).first as! T
     }
 }
 
-extension String {
+public extension String {
     func viewController<T: UIViewController>() -> T {
         return UIStoryboard(name: self, bundle: nil).viewController()
     }
@@ -40,7 +40,7 @@ extension String {
 
 
 
-extension CGRect {
+public extension CGRect {
 	func multiBy(scale: CGFloat, holdCenter: Bool = false) -> CGRect {
 		let newWidth = self.width * scale
 		let newHeight = self.height * scale

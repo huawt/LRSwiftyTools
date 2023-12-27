@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 
 // MARK: - Methods
-extension UICollectionView {
+public extension UICollectionView {
     /// SwifterSwift: Reload data with a completion handler.
     ///
     /// - Parameter completion: completion handler to run after reloadData finishes.
