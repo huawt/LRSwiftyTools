@@ -14,9 +14,9 @@ public class LRGradientBorderView: UIView {
     @IBInspectable public var startPoint: CGPoint = CGPoint.zero
     @IBInspectable public var endPoint: CGPoint = CGPoint.zero
     @IBInspectable public var locations: CGPoint = CGPoint.zero
-    @IBInspectable public var borderWidth: CGFloat = 0 {
+    @IBInspectable public var bordeWidth: CGFloat = 0 {
         didSet {
-            self.shapeLayer.borderWidth = borderWidth
+            self.shapeLayer.borderWidth = bordeWidth
         }
     }
     @IBInspectable public var gCornerRadius: CGFloat {
@@ -47,7 +47,7 @@ public class LRGradientBorderView: UIView {
             self.gradientLayer.frame = self.bounds
             CATransaction.commit()
         }
-        let newRect = CGRect(x: self.borderWidth, y: self.borderWidth, width: rect.width - 2 * self.borderWidth, height: rect.height - 2 * self.borderWidth)
+        let newRect = CGRect(x: self.bordeWidth, y: self.bordeWidth, width: rect.width - 2 * self.bordeWidth, height: rect.height - 2 * self.bordeWidth)
         if self.customColors.isEmpty == false {
             self.gradientLayer.colors = self.customColors.compactMap({ $0.cgColor })
             self.gradientLayer.locations = self.customLocations
