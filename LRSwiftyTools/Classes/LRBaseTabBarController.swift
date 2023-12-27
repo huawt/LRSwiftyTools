@@ -17,7 +17,7 @@ public enum LRTabBarItemAnimationType: Int {
     case yAxisJump
 }
 
-public class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegate {
+open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegate {
 
     private let normal: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 212.0 / 255.0, alpha: 1.0)]
     private let selected: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(red: 236/255.0, green: 95/255.0, blue: 177/255.0, alpha: 1.0)]

@@ -18,7 +18,7 @@ import AVFAudio
 }
 
 @objcMembers
-public class LRAudioPlayer: NSObject {
+open class LRAudioPlayer: NSObject {
     static let shared: LRAudioPlayer = LRAudioPlayer()
     private(set) var currentUrl: String?
     private(set) var playState: LRAudioPlayState = .finished

@@ -240,7 +240,7 @@ extension RSViewController: UITableViewDataSource {
 }
 
 // ************** RAirSandBoxSwift ***************
-public class RAirSandBoxSwift: NSObject {
+open class RAirSandBoxSwift: NSObject {
   public static let shared = RAirSandBoxSwift()
     var swipeGest: UISwipeGestureRecognizer?
     lazy var window: UIWindow = {

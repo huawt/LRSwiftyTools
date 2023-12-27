@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class LRGradientBorderView: UIView {
+open class LRGradientBorderView: UIView {
     public var isGradientBorderEnable: Bool = false
     @IBInspectable public var startColor: UIColor = UIColor.clear
     @IBInspectable public var endColor: UIColor = UIColor.clear
@@ -34,7 +34,7 @@ public class LRGradientBorderView: UIView {
     fileprivate var gradientLayer: CAGradientLayer = CAGradientLayer()
     fileprivate var shapeLayer: CAShapeLayer = CAShapeLayer()
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         guard self.isGradientBorderEnable else { return }
         self.layer.setNeedsDisplay()

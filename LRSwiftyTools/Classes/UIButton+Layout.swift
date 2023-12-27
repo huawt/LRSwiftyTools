@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-public class UILayoutButton: UIButton {
-    public override func layoutSubviews() {
+open class UILayoutButton: UIButton {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         self.resetLayoutStyle()
     }
