@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LRSwiftyTools'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'A short description of LRSwiftyTools.'
   s.description      = 'A short description of LRSwiftyTools.'
   s.homepage         = 'https://github.com/huawt/LRSwiftyTools'
