@@ -1,10 +1,3 @@
-//
-//  String+Extension.swift
-//  LingluNavigator
-//
-//  Created by custom on 2021/1/12.
-//  Copyright © 2021 com.linglu. All rights reserved.
-//
 
 import Foundation
 public extension String {
@@ -103,4 +96,10 @@ public extension String {
 			return nil
 		}
 	}
+}
+
+public extension String {
+    var notiName: NSNotification.Name {
+        return NSNotification.Name(rawValue: self)
+    }
 }
