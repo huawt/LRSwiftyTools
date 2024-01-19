@@ -1,13 +1,5 @@
-//
-//  UITableView+Ext.swift
-//  
-//
-//  Created by huawt on 2022/11/7.
-//
-
 import Foundation
 import UIKit
-
 extension UITableView {
     @objc public func modifySwipe(fontSize: CGFloat = 10) {
         guard let font: UIFont = UIFont(name: "PingFangSC-Medium", size: fontSize) else { return }
@@ -32,6 +24,5 @@ extension UITableView {
                 }
             }
         }
-        
     }
 }

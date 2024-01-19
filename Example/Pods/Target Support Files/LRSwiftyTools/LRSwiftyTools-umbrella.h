@@ -10,9 +10,6 @@
 #endif
 #endif
 
-#import "LRRegularExpression.h"
-#import "CBAutoScrollLabel.h"
-#import "LRSwiftyTools.h"
 
 FOUNDATION_EXPORT double LRSwiftyToolsVersionNumber;
 FOUNDATION_EXPORT const unsigned char LRSwiftyToolsVersionString[];

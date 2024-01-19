@@ -1,13 +1,9 @@
-
 import Foundation
 import UIKit
-
-// Storyboard
 public extension UIViewController {
     @objc static func storyBoardId() -> String{
         return String(describing:self)
     }
-    
     @objc static func currentViewController() -> UIViewController?{
         var vc = AppWindow?.rootViewController
         while 1 > 0 {
@@ -25,5 +21,4 @@ public extension UIViewController {
         }
         return vc
     }
-    
 }

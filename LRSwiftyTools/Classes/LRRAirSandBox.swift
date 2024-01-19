@@ -1,14 +1,5 @@
-//
-//  RAirSandBox.swift
-//  
-//
-//  Created by huawt on 2022/8/24.
-//
-
 import Foundation
-
 import UIKit
-
 private struct RAirSandBoxConstant {
     static let kASThemeColor = UIColor(white: 0.2, alpha: 1.0)
     static let kASWindowPadding: CGFloat = 20
@@ -16,31 +7,22 @@ private struct RAirSandBoxConstant {
         return UIScreen.main.bounds.width - (2 * self.kASWindowPadding)
     }
 }
-
 private enum RSFileItemType {
     case up, directory, file
 }
-
-// ************** RSFileItem ***************
 private class RSFileItem: NSObject {
     var name: String = ""
     var path: String = ""
     var type: RSFileItemType = .up
-
     init(name: String, path: String, type: RSFileItemType) {
         self.name = name
         self.path = path
         self.type = type
-
         super.init()
     }
 }
-
-// ************** RAirSandboxCell ***************
 private class RAirSandboxCell: UITableViewCell {
-    // reuse idenfifier
     static let classIdenfifier = String(describing: RAirSandboxCell.self)
-
     lazy var lbName: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
@@ -50,36 +32,28 @@ private class RAirSandboxCell: UITableViewCell {
         label.textColor = .black
         return label
     }()
-
     lazy var line: UIView = {
         let line = UIView()
         line.backgroundColor = RAirSandBoxConstant.kASThemeColor
         line.frame = CGRect(x: 10, y: 47, width: RAirSandBoxConstant.cellWidth - 20, height: 1)
         return line
     }()
-
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
         selectionStyle = .none
-
         addSubview(lbName)
         addSubview(line)
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
     func render(with item: RSFileItem) {
         lbName.text = item.name
     }
 }
-
-// ************** RSViewController ***************
 private class RSViewController: UIViewController {
     var items: [RSFileItem] = []
     var rootPath = NSHomeDirectory()
-
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.backgroundColor = .white
@@ -88,7 +62,6 @@ private class RSViewController: UIViewController {
         tableView.dataSource = self
         return tableView
     }()
-
     lazy var closeButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = RAirSandBoxConstant.kASThemeColor
@@ -97,19 +70,14 @@ private class RSViewController: UIViewController {
         button.addTarget(self, action: #selector(closeButtonClick), for: .touchUpInside)
         return button
     }()
-
-    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.addSubview(closeButton)
         view.addSubview(tableView)
         loadFiles()
     }
-
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-
         let viewWidth = RAirSandBoxConstant.cellWidth
         let closeButtonHeight: CGFloat = 28.0
         let closeButtonWidth: CGFloat  = 60
@@ -122,10 +90,8 @@ private class RSViewController: UIViewController {
         frame.size.height -= (closeButtonHeight + 4)
         tableView.frame = frame
     }
-
     public func loadFiles( path: String? = nil) {
         var files: [RSFileItem] = []
-
         var targetPath: String? = path
         if let targetPath = targetPath, targetPath != rootPath {
             let file = RSFileItem(name: "🔙..", path: targetPath, type: .up)
@@ -158,18 +124,13 @@ private class RSViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-
-    // MARK: - Events Response
     @objc private  func closeButtonClick() {
         view.window?.isHidden = true
     }
-
     private func share(file path: String) {
         let url = URL(fileURLWithPath: path)
-
         let shareController = UIActivityViewController(activityItems: [url],
                                                        applicationActivities: nil)
-
         shareController.excludedActivityTypes = [
             .postToWeibo,
             .message,
@@ -183,7 +144,6 @@ private class RSViewController: UIViewController {
             .assignToContact,
             .addToReadingList
         ]
-
         if UIDevice.current.model.hasPrefix("iPad") {
             shareController.popoverPresentationController?.sourceView = view
             shareController.popoverPresentationController?.sourceRect = CGRect(
@@ -192,16 +152,13 @@ private class RSViewController: UIViewController {
                 width: 10,
                 height: 10)
         }
-
         present(shareController, animated: true, completion: nil)
     }
 }
-
 extension RSViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 48
     }
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row > (items.count - 1) { return }
         tableView.deselectRow(at: indexPath, animated: false)
@@ -216,17 +173,14 @@ extension RSViewController: UITableViewDelegate {
         }
     }
 }
-
 extension RSViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row > (items.count - 1) {
             return UITableViewCell()
         }
-
         let item = items[indexPath.row]
         let cell: RAirSandboxCell
         if let reuseCell = tableView.dequeueReusableCell(withIdentifier: RAirSandboxCell.classIdenfifier) as? RAirSandboxCell {
@@ -238,8 +192,6 @@ extension RSViewController: UITableViewDataSource {
         return cell
     }
 }
-
-// ************** RAirSandBoxSwift ***************
 open class RAirSandBoxSwift: NSObject {
   public static let shared = RAirSandBoxSwift()
     var swipeGest: UISwipeGestureRecognizer?
@@ -254,15 +206,11 @@ open class RAirSandBoxSwift: NSObject {
         window.backgroundColor = .white
         window.layer.borderColor = RAirSandBoxConstant.kASThemeColor.cgColor
         window.layer.borderWidth = 2.0
-
         window.windowLevel = UIWindow.Level(rawValue: 1000)
         window.rootViewController = viewController
-
         return window
     }()
-
     private lazy var viewController = RSViewController()
-
     public func enableSwipe() {
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(onSwipeDetected(gs:)))
         swipeGesture.numberOfTouchesRequired = 1
@@ -274,12 +222,10 @@ open class RAirSandBoxSwift: NSObject {
             view.removeGestureRecognizer(swipeGest)
         }
     }
-
     public func showSandboxBrowser () {
         window.isHidden = false
         self.viewController.loadFiles()
     }
-
     @objc private func onSwipeDetected(gs: UISwipeGestureRecognizer) {
         showSandboxBrowser()
     }

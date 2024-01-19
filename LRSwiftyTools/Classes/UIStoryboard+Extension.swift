@@ -1,34 +1,19 @@
-
-
 import Foundation
 import UIKit
-
 public extension UIStoryboard {
-	/// Instantiate a UIViewController using its identifier
-	///
-	/// - Parameters:
-	///   - identifier: identifier: UIViewController identifier
-	///   - type: UIController Type
-	/// - Returns: The view controller corresponding to specified class name
 	func viewController<T: UIViewController>(with identifier: String? = nil, for type: T.Type = T.self) -> T {
 		let loadIdentifier = identifier ?? type.identifier
 		return instantiateViewController(withIdentifier: loadIdentifier) as! T
 	}
-
-	/// SwifterSwift: Instantiate a Initial UIViewController
-	///
-	/// - Returns: The view controller corresponding to specified class name
 	func initialViewController<T: UIViewController>() -> T {
 		return instantiateInitialViewController() as! T
 	}
 }
-
 public extension UINib {
     func nibView<T: UIView>() -> T {
         return instantiate(withOwner: T.self).first as! T
     }
 }
-
 public extension String {
     func viewController<T: UIViewController>() -> T {
         return UIStoryboard(name: self, bundle: nil).viewController()
@@ -37,9 +22,6 @@ public extension String {
         return UINib(nibName: self, bundle: nil).nibView()
     }
 }
-
-
-
 public extension CGRect {
 	func multiBy(scale: CGFloat, holdCenter: Bool = false) -> CGRect {
 		let newWidth = self.width * scale

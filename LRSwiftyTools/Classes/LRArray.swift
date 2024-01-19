@@ -1,12 +1,4 @@
-//
-//  Array+Ext.swift
-//  
-//
-//  Created by WinTer on 2022/6/3.
-//
-
 import Foundation
-
 public extension Array where Element: Hashable {
     var unique: [Element] {
         var uniq = Set<Element>()
@@ -16,7 +8,6 @@ public extension Array where Element: Hashable {
         }
     }
 }
-
 public extension Array where Element: Any {
     func shuffle() -> Self {
         guard self.count > 1 else { return self }
@@ -30,7 +21,6 @@ public extension Array where Element: Any {
         return result
     }
 }
-
 public extension Array {
     mutating func removeFirst(_ k: Int) -> Self {
         if self.count < k {

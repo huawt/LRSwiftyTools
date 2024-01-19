@@ -1,11 +1,8 @@
-
 import Foundation
-
 public extension Data {
     var fileExtension: String {
         var values = [UInt8](repeating:0, count:1)
         self.copyBytes(to: &values, count: 1)
-        
         var ext: String = ".png"
         switch (values[0]) {
         case 0xFF:
@@ -34,16 +31,12 @@ public extension Data {
         }
         return ext
     }
-    
-    //将Data转换为String
     var hexString: String {
         return withUnsafeBytes {(bytes: UnsafePointer<UInt8>) -> String in
             let buffer = UnsafeBufferPointer(start: bytes, count: count)
             return buffer.map {String(format: "%02hhx", $0)}.reduce("", { $0 + $1 })
         }
     }
-    
-    
     private static let mimeTypeSignatures: [UInt8 : String] = [
         0xFF : "image/jpeg",
         0x89 : "image/png",
@@ -54,7 +47,6 @@ public extension Data {
         0xD0 : "application/vnd",
         0x46 : "text/plain",
     ]
-    
     var mimeType: String {
         var c: UInt8 = 0
         copyBytes(to: &c, count: 1)

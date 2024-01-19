@@ -1,6 +1,4 @@
-
 import Foundation
-
 public extension Date {
     static func currentDate(_ format: String = "yyyy-MM-dd HH:mm:ss") -> String {
         let dateFormatter = DateFormatter()
@@ -8,16 +6,13 @@ public extension Date {
         let currentDate = dateFormatter.string(from: Date())
         return currentDate
     }
-
     func currentDate(_ format: String = "yyyy-MM-dd HH:mm:ss") -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         let currentDate = dateFormatter.string(from: self)
         return currentDate
     }
-
 }
-
 public extension Date {
     var timeStamp : Int {
         let timeInterval: TimeInterval = self.timeIntervalSince1970

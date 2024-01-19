@@ -1,12 +1,4 @@
-//
-//  LRGradientBorderView.swift
-//  
-//
-//  Created by huawt on 2022/5/9.
-//
-
 import UIKit
-
 open class LRGradientBorderView: UIView {
     public var isGradientBorderEnable: Bool = false
     @IBInspectable public var startColor: UIColor = UIColor.clear
@@ -27,13 +19,10 @@ open class LRGradientBorderView: UIView {
             return self.layer.cornerRadius
         }
     }
-    
     public var customLocations: [NSNumber] = []
     public var customColors: [UIColor] = []
-    
     fileprivate var gradientLayer: CAGradientLayer = CAGradientLayer()
     fileprivate var shapeLayer: CAShapeLayer = CAShapeLayer()
-    
     open override func layoutSubviews() {
         super.layoutSubviews()
         guard self.isGradientBorderEnable else { return }

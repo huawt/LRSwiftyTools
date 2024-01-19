@@ -1,13 +1,4 @@
-//
-//  String+Json.swift
-//  
-//
-//  Created by huawt on 2022/6/28.
-//
-
 import Foundation
-
-// MARK: 字典转字符串
 public extension Dictionary {
     func toJsonString() -> String? {
         guard let data = try? JSONSerialization.data(withJSONObject: self, options: []) else {
@@ -19,8 +10,6 @@ public extension Dictionary {
         return str
      }
 }
-
-// MARK: 字符串转字典
 public extension String {
     func toDictionary() -> [String : Any] {
         var result: [String : Any] = [:]

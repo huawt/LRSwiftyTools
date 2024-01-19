@@ -1,14 +1,6 @@
-//
-//  LRBaseTabBarController.swift
-//
-//
-//  Created by huawt on 2022/11/9.
-//
-
 import UIKit
 import Foundation
 import QuartzCore
-
 public enum LRTabBarItemAnimationType: Int {
     case none
     case gravity
@@ -16,15 +8,11 @@ public enum LRTabBarItemAnimationType: Int {
     case zAxisRotation
     case yAxisJump
 }
-
 open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegate {
-
-    private let normal: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 212.0 / 255.0, alpha: 1.0)]
-    private let selected: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(red: 236/255.0, green: 95/255.0, blue: 177/255.0, alpha: 1.0)]
-    
-    
+    public static var normal: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.lightGray]
+    public static var selected: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.black]
+    public static var backgroundColor: UIColor = .white
     public var reSelectHandler:((_ index: Int)->Void)?
-    
     private lazy var imageViews: [UIImageView] = {
         var views: [UIImageView] = []
         var buttonss: [UIControl] = []
@@ -43,11 +31,9 @@ open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegat
         return views
     }()
     public var itemAniamtionType: LRTabBarItemAnimationType = .none
-    
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        
         self.tabBar.barStyle = .default
         self.tabBar.isOpaque = false
         self.tabBar.isTranslucent = false
@@ -58,29 +44,26 @@ open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegat
             self.configAppearance(appearance.inlineLayoutAppearance)
             self.configAppearance(appearance.compactInlineLayoutAppearance)
             appearance.shadowImage = UIImage.image(color: UIColor.clear)
-            appearance.backgroundImage = UIImage.image(color: UIColor.white)
-            appearance.backgroundColor = UIColor.white
+            appearance.backgroundImage = UIImage.image(color: LRBaseTabBarController.backgroundColor)
+            appearance.backgroundColor = LRBaseTabBarController.backgroundColor
             self.tabBar.standardAppearance = appearance
             if #available(iOS 15.0, *) {
                 self.tabBar.scrollEdgeAppearance = appearance
             }
-            self.tabBar.standardAppearance.backgroundColor = UIColor.white
+            self.tabBar.standardAppearance.backgroundColor = LRBaseTabBarController.backgroundColor
         } else {
-            self.tabBar.backgroundColor = UIColor.white
-            UITabBarItem.appearance().setTitleTextAttributes(normal, for: .normal)
-            UITabBarItem.appearance().setTitleTextAttributes(selected, for: .selected)
+            self.tabBar.backgroundColor = LRBaseTabBarController.backgroundColor
+            UITabBarItem.appearance().setTitleTextAttributes(LRBaseTabBarController.normal, for: .normal)
+            UITabBarItem.appearance().setTitleTextAttributes(LRBaseTabBarController.selected, for: .selected)
             self.tabBar.backgroundImage = UIImage.image(color: .clear, size: CGSize(width: LRWidth, height: LRTabBarHeight))
             self.tabBar.shadowImage = UIImage.image(color: .clear)
         }
-        
     }
-    
     @available(iOS 13.0, *)
     private func configAppearance(_ itemAppearance: UITabBarItemAppearance) {
-        itemAppearance.normal.titleTextAttributes = normal
-        itemAppearance.selected.titleTextAttributes = selected
+        itemAppearance.normal.titleTextAttributes = LRBaseTabBarController.normal
+        itemAppearance.selected.titleTextAttributes = LRBaseTabBarController.selected
     }
-    
     public func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if let index = tabBarController.viewControllers?.firstIndex(of: viewController), index != NSNotFound {
             self.animate(index: index)
@@ -91,7 +74,6 @@ open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegat
         guard let index = tabBar.items?.firstIndex(of: item), index != NSNotFound, self.selectedIndex == index else { return }
         self.reSelectHandler?(index)
     }
-    
     private func animate(index: Int) {
         guard self.itemAniamtionType != .none else { return }
         guard self.imageViews.isEmpty == false else { return }
@@ -110,7 +92,6 @@ open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegat
         }
     }
 }
-
 class AnimationTool {
     class func gravity(view: UIView) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.y")

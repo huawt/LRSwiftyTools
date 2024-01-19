@@ -1,7 +1,5 @@
-
 import Foundation
 import UIKit
-
 public extension NSArray{
     func safeObjectAtIndex(_ index: Int) -> Any? {
         if index < self.count && index >= 0 {
@@ -11,7 +9,6 @@ public extension NSArray{
         }
     }    
 }
-
 public extension Array {
     func safeObjectAtIndex(_ index: Int) -> Element? {
         if index < self.count && index >= 0 {
@@ -29,7 +26,6 @@ public extension Array {
         return false
     }
 }
-
 public extension Array {
     func limit(_ index: Int) -> Self {
         if self.count <= index { return self }
