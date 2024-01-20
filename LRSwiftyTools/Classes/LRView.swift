@@ -64,3 +64,16 @@ public extension UIView {
 		return nil
 	}
 }
+extension UIView {
+    public func shadow(color: UIColor = UIColor.black.withAlphaComponent(0.5), offset: CGSize = CGSize(width: 0, height: 1), opacity: CGFloat = 1, radius: CGFloat = 2) {
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOffset = offset
+        self.layer.shadowOpacity = Float(opacity)
+        self.layer.shadowRadius = radius
+    }
+    public func removeALLSubviews() {
+        self.subviews.forEach { subview in
+            subview.removeFromSuperview()
+        }
+    }
+}

@@ -49,8 +49,9 @@ extension UIButton {
         }
     }
     func layoutHorizontal(leftView: UIView, rightView: UIView, spacing: CGFloat) {
-        var leftFrame = leftView.frame
-        var rightFrame = rightView.frame
+        var leftFrame = leftView.isHidden ? CGRect.zero : leftView.frame
+        var rightFrame = rightView.isHidden ? CGRect.zero : rightView.frame
+        var spacing = (leftView.isHidden || rightView.isHidden) ? 0 : spacing
         let totalWidth = leftFrame.width + spacing + rightFrame.width
         switch self.contentHorizontalAlignment {
         case .left, .leading:
@@ -84,8 +85,9 @@ extension UIButton {
         rightView.frame = rightFrame
     }
     func layoutVertical(upView: UIView, downView: UIView, spacing: CGFloat) {
-        var upFrame = upView.frame
-        var downFrame = downView.frame
+        var upFrame = upView.isHidden ? CGRect.zero : upView.frame
+        var downFrame = downView.isHidden ? CGRect.zero : downView.frame
+        var spacing = (upView.isHidden || downView.isHidden) ? 0 : spacing
         let totalHeight = upFrame.height + spacing + downFrame.height
         switch self.contentHorizontalAlignment {
         case .left, .leading:
