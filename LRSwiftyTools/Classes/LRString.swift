@@ -58,6 +58,18 @@ public extension String {
 		}
 		return regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count))
 	}
+    func match(pattern: String, options: NSRegularExpression.Options = []) -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
+            return false
+        }
+        let results = self.matches(pattern: pattern, options: options)
+        for result in results {
+            if result.range.location != NSNotFound {
+                return true
+            }
+        }
+        return false
+    }
 	func parseURLtoDictionary() -> [String: Any] {
 		var res: [String: Any] = [:]
 		if let url = URL(string: self) {
@@ -78,6 +90,19 @@ public extension String {
 			return nil
 		}
 	}
+    func isValid() -> Bool {
+        if self.isEmpty { return false }
+        let trimStr = self.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard trimStr.isEmpty == false else { return false }
+        if trimStr.replacingOccurrences(of: " ", with: "").isEmpty { return false }
+        return true
+    }
+}
+public extension String {
+    func nsRange(of string: String) -> NSRange {
+        guard let range = self.range(of: string) else { return NSRange(location: 0, length: 0) }
+        return NSRange(range, in: self)
+    }
 }
 public extension String {
     var notiName: NSNotification.Name {
