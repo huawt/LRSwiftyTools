@@ -2,26 +2,14 @@ import Foundation
 import UIKit
 public let LRWidth: CGFloat = UIScreen.main.bounds.width
 public let LRHeight: CGFloat = UIScreen.main.bounds.height
-public func LRSafeArea() -> UIEdgeInsets {
-    return AppWindow?.safeAreaInsets ?? .zero
-}
-public var LRTabBarHeight: CGFloat {
-    return 49 + LRSafeArea().bottom
-}
-public var LRNavigationBarHeight: CGFloat {
-    return 44
-}
-public var LRTabbarOffset: CGFloat {
-    return LRSafeArea().bottom
-}
-public var KStatusBarHeight: CGFloat {
-    return LRSafeArea().top
-}
-public var kTopHeight: CGFloat {
-    return (LRSafeArea().top + 44)
-}
-public func kIsIPhoneX() -> Bool {
-    return LRSafeArea().left != 0 || LRSafeArea().bottom != 0
+public private(set) var LRSafeArea: UIEdgeInsets = .zero
+public private(set) var LRTabBarHeight: CGFloat = 49
+public private(set) var LRNavigationBarHeight: CGFloat = 44
+public private(set) var LRTabbarOffset: CGFloat = 0
+public private(set) var LRStatusBarHeight: CGFloat = 20
+public private(set) var LRFinalTopHeight: CGFloat = 64
+public func LRIsIPhoneX() -> Bool {
+    return LRSafeArea.left != 0 || LRSafeArea.bottom != 0
 }
 public var AppWindow: UIWindow? {
     if #available(iOS 16.0, *) {
@@ -34,4 +22,20 @@ public var AppWindow: UIWindow? {
         }
     }
     return UIApplication.shared.keyWindow
+}
+class LRSwiftyTools: NSObject {
+    static func configureUISize() {
+        LRSafeArea = AppWindow?.safeAreaInsets ?? .zero
+        if LRIsIPhoneX() {
+            LRTabbarOffset = LRSafeArea.bottom
+            LRTabBarHeight = 49 + LRTabbarOffset
+            LRStatusBarHeight = LRSafeArea.top
+            LRFinalTopHeight = LRStatusBarHeight + LRNavigationBarHeight
+        } else {
+            LRTabbarOffset = 0
+            LRTabBarHeight = 49 + LRTabbarOffset
+            LRStatusBarHeight = 20
+            LRFinalTopHeight = LRStatusBarHeight + LRNavigationBarHeight
+        }
+    }
 }

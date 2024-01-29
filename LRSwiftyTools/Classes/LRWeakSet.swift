@@ -61,8 +61,9 @@ public protocol DispatchPool {
 	func del(observer: Observer)
 	func dispatch(selector: Selector, object1: Any?, object2: Any?)
 }
-open class Dispatcher<P: NSObjectProtocol>: DispatchPool {
+open class Dispatcher<P: NSObjectProtocol>: NSObject, DispatchPool {
 	fileprivate let mutex = NSLock()
+    public override init() { }
 	deinit {
 		observers.removeAll()
 	}
