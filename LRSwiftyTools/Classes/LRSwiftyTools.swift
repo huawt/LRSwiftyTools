@@ -23,8 +23,8 @@ public var AppWindow: UIWindow? {
     }
     return UIApplication.shared.keyWindow
 }
-class LRSwiftyTools: NSObject {
-    static func configureUISize() {
+open class LRSwiftyTools: NSObject {
+    public class func configureUISize() {
         LRSafeArea = AppWindow?.safeAreaInsets ?? .zero
         if LRIsIPhoneX() {
             LRTabbarOffset = LRSafeArea.bottom

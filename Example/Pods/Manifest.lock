@@ -1,5 +1,5 @@
 PODS:
-  - LRSwiftyTools (0.1.3)
+  - LRSwiftyTools (0.1.4)
 
 DEPENDENCIES:
   - LRSwiftyTools (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LRSwiftyTools: ac3c0386b5e0ea3f208af885d6a1a4e0a9e0c70f
+  LRSwiftyTools: 9de82e294602d2ad085389b96c0dd6bcda0bdd1b
 
 PODFILE CHECKSUM: cf29f1356e452a6694c24725629b7cf6e7d31502
 
