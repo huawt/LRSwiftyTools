@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = .purple
+        let h = LRHoleView(frame: self.view.bounds)
+        h.config = LRHoleConfig(rect: CGRect(x: 100, y: 100, width: 100, height: 100), corners: [.allCorners], cornerRadii:CGSize(width: 50, height: 50), fillColor: .red, strokeColor: .yellow)
+        self.view.addSubview(h)
     }
 
     override func didReceiveMemoryWarning() {

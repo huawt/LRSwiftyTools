@@ -1,9 +1,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LRSwiftyTools'
-  s.version          = '0.1.4'
-  s.summary          = 'A short description of LRSwiftyTools.'
-  s.description      = 'A short description of LRSwiftyTools.'
+  s.version          = '0.1.5'
+  s.summary          = 'LRSwiftyTools. self-use.'
+  s.description      = 'LRSwiftyTools. self-use.'
   s.homepage         = 'https://github.com/huawt/LRSwiftyTools'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'huawt' => 'ghost263sky@163.com' }

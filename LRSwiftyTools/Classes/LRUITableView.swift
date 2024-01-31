@@ -3,6 +3,9 @@ public extension UITableView {
 	func registerCell<T: UITableViewCell>(_ type: T.Type, withIdentifier reuseIdentifier: String = String(describing: T.self)) {
 		register(T.self, forCellReuseIdentifier: reuseIdentifier)
 	}
+    func registerNibCell<T: UITableViewCell>(_ type: T.Type, withIdentifier reuseIdentifier: String = String(describing: T.self)) {
+        register(UINib(nibName: String(describing: T.self), bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+    }
 	func dequeueCell<T: UITableViewCell>(_ type: T.Type = T.self, withIdentifier reuseIdentifier: String = String(describing: T.self)) -> T {
 		guard let cell = dequeueReusableCell(withIdentifier: reuseIdentifier) as? T else {
 			fatalError("Unknown cell type (\(T.self)) for reuse identifier: \(reuseIdentifier)")

@@ -1,8 +1,8 @@
 {
   "name": "LRSwiftyTools",
-  "version": "0.1.4",
-  "summary": "A short description of LRSwiftyTools.",
-  "description": "A short description of LRSwiftyTools.",
+  "version": "0.1.5",
+  "summary": "LRSwiftyTools. self-use.",
+  "description": "LRSwiftyTools. self-use.",
   "homepage": "https://github.com/huawt/LRSwiftyTools",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/huawt/LRSwiftyTools.git",
-    "tag": "0.1.4"
+    "tag": "0.1.5"
   },
   "platforms": {
     "ios": "12.0"
