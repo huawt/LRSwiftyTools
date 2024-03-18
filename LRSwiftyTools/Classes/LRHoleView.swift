@@ -15,6 +15,7 @@ public struct LRHoleConfig {
         self.strokeColor = strokeColor
     }
 }
+@objcMembers
 open class LRHoleView: UIView {
     private lazy var shapeLayer = CAShapeLayer()
     public var config: LRHoleConfig = LRHoleConfig(rect: .zero, corners: [.allCorners], cornerRadii: .zero, fillColor: .clear, strokeColor: .clear) {

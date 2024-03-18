@@ -1,6 +1,6 @@
 import Foundation
 public extension String {
-	func height(for font: UIFont, constrainedTo width: CGFloat) -> CGFloat {
+    func height(for font: UIFont, constrainedTo width: CGFloat) -> CGFloat {
 		return self.boundingSize(for: font, constrainedWidth: width).height
 	}
 	func width(for font: UIFont, constrainedHeight height: CGFloat) -> CGFloat {

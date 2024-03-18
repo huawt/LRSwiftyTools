@@ -1,13 +1,14 @@
 import UIKit
 import Foundation
 import QuartzCore
-public enum LRTabBarItemAnimationType: Int {
+@objc public enum LRTabBarItemAnimationType: Int {
     case none
     case gravity
     case zoomInout
     case zAxisRotation
     case yAxisJump
 }
+@objcMembers
 open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     public static var normal: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.lightGray]
     public static var selected: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.black]
@@ -92,6 +93,7 @@ open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegat
         }
     }
 }
+@objcMembers
 class AnimationTool {
     class func gravity(view: UIView) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.y")

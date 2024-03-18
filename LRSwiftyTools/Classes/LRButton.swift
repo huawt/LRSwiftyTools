@@ -1,12 +1,13 @@
 import Foundation
 import UIKit
+@objcMembers
 open class UILayoutButton: UIButton {
     open override func layoutSubviews() {
         super.layoutSubviews()
         self.resetLayoutStyle()
     }
 }
-public enum UIButtonLayoutStyle: Int {
+@objc public enum UIButtonLayoutStyle: Int {
     case leftImageRightTitle = 0
     case leftTitleRightImage
     case upImageDownTitle
@@ -51,7 +52,7 @@ extension UIButton {
     func layoutHorizontal(leftView: UIView, rightView: UIView, spacing: CGFloat) {
         var leftFrame = leftView.isHidden ? CGRect.zero : leftView.frame
         var rightFrame = rightView.isHidden ? CGRect.zero : rightView.frame
-        var spacing = (leftView.isHidden || rightView.isHidden) ? 0 : spacing
+        let spacing = (leftView.isHidden || rightView.isHidden) ? 0 : spacing
         let totalWidth = leftFrame.width + spacing + rightFrame.width
         switch self.contentHorizontalAlignment {
         case .left, .leading:
@@ -87,7 +88,7 @@ extension UIButton {
     func layoutVertical(upView: UIView, downView: UIView, spacing: CGFloat) {
         var upFrame = upView.isHidden ? CGRect.zero : upView.frame
         var downFrame = downView.isHidden ? CGRect.zero : downView.frame
-        var spacing = (upView.isHidden || downView.isHidden) ? 0 : spacing
+        let spacing = (upView.isHidden || downView.isHidden) ? 0 : spacing
         let totalHeight = upFrame.height + spacing + downFrame.height
         switch self.contentHorizontalAlignment {
         case .left, .leading:

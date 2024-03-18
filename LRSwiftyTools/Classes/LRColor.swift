@@ -1,14 +1,14 @@
 import UIKit
 import Foundation
-public extension UIColor {
-    static func color(by hexString: String) -> UIColor? {
+@objc public extension UIColor {
+    @objc static func color(by hexString: String) -> UIColor? {
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
         if hexToRGBA(str: hexString, r: &r, g: &g, b: &b, a: &a) {
             return UIColor(red: r, green: g, blue: b, alpha: a)
         }
         return nil
     }
-    private static func hexToRGBA(str: String, r: inout CGFloat, g: inout CGFloat, b: inout CGFloat, a: inout CGFloat) -> Bool {
+    @nonobjc private static func hexToRGBA(str: String, r: inout CGFloat, g: inout CGFloat, b: inout CGFloat, a: inout CGFloat) -> Bool {
         var str = str.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         if str.hasPrefix("#") {
             str = str.subString(from: 1)

@@ -1,4 +1,5 @@
 import UIKit
+@objcMembers
 open class LRGradientBorderView: UIView {
     public var isGradientBorderEnable: Bool = false
     @IBInspectable public var startColor: UIColor = UIColor.clear

@@ -95,7 +95,7 @@
 		4AD3C7250FDF07E3D5621526EA8D05ED /* LRSafeArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRSafeArray.swift; path = LRSwiftyTools/Classes/LRSafeArray.swift; sourceTree = "<group>"; };
 		5330F4FD3FF4634707B920F1821F4854 /* LRData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRData.swift; path = LRSwiftyTools/Classes/LRData.swift; sourceTree = "<group>"; };
 		541820AC757460B3ACF5FF564D6D3738 /* LRGCDHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRGCDHelper.swift; path = LRSwiftyTools/Classes/LRGCDHelper.swift; sourceTree = "<group>"; };
-		54B2FB83584313FBECCE03F56DB3796B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		54B2FB83584313FBECCE03F56DB3796B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		61E148F7E7400D8733221C525FC38363 /* LRDouble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRDouble.swift; path = LRSwiftyTools/Classes/LRDouble.swift; sourceTree = "<group>"; };
 		62CDD2A21B8864282C288BDFDE8FFF81 /* LRCollectionColorFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRCollectionColorFlowLayout.swift; path = LRSwiftyTools/Classes/LRCollectionColorFlowLayout.swift; sourceTree = "<group>"; };
 		665B9D7BA8BE4D8228F8E575378272CC /* Pods-LRSwiftyTools_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LRSwiftyTools_Tests"; path = Pods_LRSwiftyTools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +115,7 @@
 		85B527E70509E3AB1A944DD5169B882A /* Pods-LRSwiftyTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LRSwiftyTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8911ACB3743E4908B1738BB96BEB0EB5 /* LRUnselectableTappableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUnselectableTappableTextView.swift; path = LRSwiftyTools/Classes/LRUnselectableTappableTextView.swift; sourceTree = "<group>"; };
 		90896CE57FBEC785C7290D351576F1C2 /* LRTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRTextView.swift; path = LRSwiftyTools/Classes/LRTextView.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A46320AE7D31B6B78DEB0D1D3CD373A6 /* LRPHAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRPHAsset.swift; path = LRSwiftyTools/Classes/LRPHAsset.swift; sourceTree = "<group>"; };
 		A6187B7FB07B6ED2E8C476F0B659122E /* Pods-LRSwiftyTools_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LRSwiftyTools_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A79B1B05C825DA12F88BAA9921819E3F /* Pods-LRSwiftyTools_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LRSwiftyTools_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		AF6431BA4751157A103300C45509D037 /* LRReuseable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRReuseable.swift; path = LRSwiftyTools/Classes/LRReuseable.swift; sourceTree = "<group>"; };
 		B5A6F69723B181311281D24BE62D6CDD /* LRAutoScrollLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRAutoScrollLabel.swift; path = LRSwiftyTools/Classes/LRAutoScrollLabel.swift; sourceTree = "<group>"; };
 		B5E3EF9E09BB2E74EE3EDF49913AA84E /* Pods-LRSwiftyTools_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LRSwiftyTools_Example-umbrella.h"; sourceTree = "<group>"; };
-		BA04FD88BB1CA30E7D9E113CA385E5EE /* LRSwiftyTools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LRSwiftyTools.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BA04FD88BB1CA30E7D9E113CA385E5EE /* LRSwiftyTools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LRSwiftyTools.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C3AF861910BD2C42039E877BE1C8CB05 /* Pods-LRSwiftyTools_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LRSwiftyTools_Example-Info.plist"; sourceTree = "<group>"; };
 		C7144DAECFC91E3ABBDDA4B32F9E5B94 /* Pods-LRSwiftyTools_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LRSwiftyTools_Example"; path = Pods_LRSwiftyTools_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C926AADA70B61D7AEE691585879D5C7D /* Pods-LRSwiftyTools_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LRSwiftyTools_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		D8B910517D9504129C76CB1429F1BD54 /* Pods-LRSwiftyTools_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LRSwiftyTools_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E63B996AEAC25C4210967DF0F338E2FE /* LRImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRImage.swift; path = LRSwiftyTools/Classes/LRImage.swift; sourceTree = "<group>"; };
 		E67B88F482128B8DAE051889C976A0DB /* LRUICollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUICollectionView.swift; path = LRSwiftyTools/Classes/LRUICollectionView.swift; sourceTree = "<group>"; };
-		EB0A5F6B309161CA83B3873180674796 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EB0A5F6B309161CA83B3873180674796 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F388B35163F13C788DDAE7B22E773DAD /* LRUIStoryboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUIStoryboard.swift; path = LRSwiftyTools/Classes/LRUIStoryboard.swift; sourceTree = "<group>"; };
 		F7100FA3CB7361F404AD0A11AADE55D3 /* Pods-LRSwiftyTools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LRSwiftyTools_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F78B951B650B4EFB88A6487E9F543B30 /* Pods-LRSwiftyTools_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LRSwiftyTools_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -795,8 +795,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

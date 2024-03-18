@@ -6,15 +6,11 @@ let kDefaultFadeLength: CGFloat = 7
 let kDefaultLabelBufferSpace: Int = 20
 let kDefaultPixelsPerSecond: CGFloat = 30
 let kDefaultPauseTime: CGFloat = 1.5
-public enum LRAutoScrollDirection: Int {
+@objc public enum LRAutoScrollDirection: Int {
     case right
     case left
 }
-func each_objects(_ objects: [Any], handler: ((_ object: Any)->Void)) {
-    for object in objects {
-        handler(object)
-    }
-}
+@objcMembers
 open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
     public var scrollDirection: LRAutoScrollDirection = .left {
         didSet {
@@ -129,7 +125,7 @@ open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
     }
     fileprivate func commonInit() {
         self.addSubview(self.scrollView)
-        for index in 0 ..< 2 {
+        for _ in 0 ..< 2 {
             let label = UILabel()
             label.backgroundColor = .clear
             label.autoresizingMask = self.autoresizingMask

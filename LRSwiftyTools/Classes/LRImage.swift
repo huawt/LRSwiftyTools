@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
-public extension UIImage {
-    class func image(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
+@objc public extension UIImage {
+    @objc class func image(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
         context?.setFillColor(color.cgColor)
@@ -10,7 +10,7 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
-    func fixOrientation() -> UIImage {
+    @objc func fixOrientation() -> UIImage {
         if self.imageOrientation == .up { return self }
         var transform: CGAffineTransform = .identity
         switch self.imageOrientation {

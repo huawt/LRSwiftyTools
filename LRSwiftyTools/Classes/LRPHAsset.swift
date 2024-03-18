@@ -1,8 +1,8 @@
 import Foundation
 import Photos
 import AVKit
-public extension PHAsset {
-    func getNetImage(_ urlString: String) -> UIImage {
+@objc public extension PHAsset {
+    @objc func getNetImage(_ urlString: String) -> UIImage {
         guard let url = URL(string: urlString) else{
             return UIImage()
         }
