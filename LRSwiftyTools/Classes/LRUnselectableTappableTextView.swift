@@ -1,5 +1,6 @@
 import UIKit
 import Dispatch
+@objcMembers
 open class LRUnselectableTappableTextView: UITextView {
     open override var selectedTextRange: UITextRange? {
         get { return nil }

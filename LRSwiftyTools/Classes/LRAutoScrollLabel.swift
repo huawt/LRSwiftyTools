@@ -12,21 +12,21 @@ let kDefaultPauseTime: CGFloat = 1.5
 }
 @objcMembers
 open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
-    public var scrollDirection: LRAutoScrollDirection = .left {
+    @objc public var scrollDirection: LRAutoScrollDirection = .left {
         didSet {
             self.scrollLabelIfNeeded()
         }
     }
-    public var scrollSpeed: CGFloat = kDefaultPixelsPerSecond {
+    @objc public var scrollSpeed: CGFloat = kDefaultPixelsPerSecond {
         didSet {
             self.scrollLabelIfNeeded()
         }
     }
-    public var pauseInterval: TimeInterval = kDefaultPauseTime
-    public var labelSpacing: Int = kDefaultLabelBufferSpace
-    public var animationOptions: UIView.AnimationOptions = .curveLinear
+    @objc public var pauseInterval: TimeInterval = kDefaultPauseTime
+    @objc public var labelSpacing: Int = kDefaultLabelBufferSpace
+    @objc public var animationOptions: UIView.AnimationOptions = .curveLinear
     public private(set) var scrolling: Bool = false
-    public var fadeLength: CGFloat = kDefaultFadeLength {
+    @objc public var fadeLength: CGFloat = kDefaultFadeLength {
         willSet {
             if fadeLength == newValue { return }
         }
@@ -35,7 +35,7 @@ open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
             self.applyGradientMask(for: fadeLength, enable: false)
         }
     }
-    public var font: UIFont {
+    @objc public var font: UIFont {
         set {
             guard font != newValue else { return }
             self.labels.forEach { label in
@@ -48,7 +48,7 @@ open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
             return self.mainLabel.font
         }
     }
-    public var text: String? {
+    @objc public var text: String? {
         set {
             guard text != newValue else { return }
             self.setText(newValue, refreshLabels: true)
@@ -57,7 +57,7 @@ open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
             return self.mainLabel.text
         }
     }
-    public var attributedText: NSAttributedString? {
+    @objc public var attributedText: NSAttributedString? {
         set {
             guard attributedText?.string != newValue?.string else { return }
             self.setAttributedText(newValue, refreshLabels: true)
@@ -66,7 +66,7 @@ open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
             return self.mainLabel.attributedText
         }
     }
-    public var textColor: UIColor {
+    @objc public var textColor: UIColor {
         set {
             guard textColor != newValue else { return }
             self.labels.forEach { label in
@@ -77,8 +77,8 @@ open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
             self.mainLabel.textColor
         }
     }
-    public var textAlignment: NSTextAlignment = .left
-    public var shadowColor: UIColor? {
+    @objc public var textAlignment: NSTextAlignment = .left
+    @objc public var shadowColor: UIColor? {
         set {
             self.labels.forEach { label in
                 label.shadowColor = newValue
@@ -88,7 +88,7 @@ open class LRAutoScrollLabel: UIView, UIScrollViewDelegate {
             return self.mainLabel.shadowColor
         }
     }
-    public var shadowOffset: CGSize {
+    @objc public var shadowOffset: CGSize {
         set {
             self.labels.forEach { label in
                 label.shadowOffset = newValue

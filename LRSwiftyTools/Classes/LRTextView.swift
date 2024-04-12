@@ -1,4 +1,5 @@
 import UIKit
+@objcMembers
 open class LRTextView: UITextView {
     private lazy var placeholderLabel: UILabel = {
         let l = UILabel()
@@ -9,13 +10,13 @@ open class LRTextView: UITextView {
         l.alpha = 0
         return l
     }()
-    @IBInspectable public var placeholder: String = "" {
+    @objc @IBInspectable public var placeholder: String = "" {
         didSet {
             self.placeholderLabel.text = placeholder
             self.placeholderLabel.sizeToFit()
         }
     }
-    @IBInspectable public var placeholderColor: UIColor = .clear {
+    @objc @IBInspectable public var placeholderColor: UIColor = .clear {
         didSet {
             self.placeholderLabel.textColor = placeholderColor
             self.placeholderLabel.sizeToFit()

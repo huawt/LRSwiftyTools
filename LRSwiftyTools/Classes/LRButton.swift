@@ -13,12 +13,12 @@ open class UILayoutButton: UIButton {
     case upImageDownTitle
     case upTitleDownImage
 }
-extension UIButton {
+@objc extension UIButton {
     private struct _AssociatedKeys {
         static var spacingKey = "spacingKey"
         static var styleKey = "styleKey"
     }
-    public var spacing: CGFloat {
+    @objc @IBInspectable public var spacing: CGFloat {
         get {
             return objc_getAssociatedObject(self, &_AssociatedKeys.spacingKey) as? CGFloat ?? 2
         }
@@ -32,6 +32,14 @@ extension UIButton {
         }
         set {
             objc_setAssociatedObject(self, &_AssociatedKeys.styleKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC )
+        }
+    }
+    @objc @IBInspectable var layoutStyleNumber: Int {
+        set {
+            self.layoutStyle = UIButtonLayoutStyle(rawValue: newValue) ?? .leftImageRightTitle
+        }
+        get {
+            return self.layoutStyle.rawValue
         }
     }
     public func resetLayoutStyle() {

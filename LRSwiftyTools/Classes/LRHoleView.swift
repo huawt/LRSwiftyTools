@@ -1,6 +1,7 @@
 import UIKit
 import Foundation
-public struct LRHoleConfig {
+@objcMembers
+open class LRHoleConfig: NSObject {
     var rect: CGRect
     var corners: UIRectCorner
     var cornerRadii: CGSize
@@ -18,7 +19,7 @@ public struct LRHoleConfig {
 @objcMembers
 open class LRHoleView: UIView {
     private lazy var shapeLayer = CAShapeLayer()
-    public var config: LRHoleConfig = LRHoleConfig(rect: .zero, corners: [.allCorners], cornerRadii: .zero, fillColor: .clear, strokeColor: .clear) {
+    @objc public var config: LRHoleConfig = LRHoleConfig(rect: .zero, corners: [.allCorners], cornerRadii: .zero, fillColor: .clear, strokeColor: .clear) {
         didSet {
             self.setNeedsDisplay()
         }

@@ -10,10 +10,10 @@ import QuartzCore
 }
 @objcMembers
 open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegate {
-    public static var normal: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.lightGray]
-    public static var selected: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.black]
-    public static var backgroundColor: UIColor = .white
-    public var reSelectHandler:((_ index: Int)->Void)?
+    @objc public static var normal: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.lightGray]
+    @objc public static var selected: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.black]
+    @objc public static var backgroundColor: UIColor = .white
+    @objc public var reSelectHandler:((_ index: Int)->Void)?
     private lazy var imageViews: [UIImageView] = {
         var views: [UIImageView] = []
         var buttonss: [UIControl] = []
@@ -31,7 +31,7 @@ open class LRBaseTabBarController: UITabBarController, UITabBarControllerDelegat
         }
         return views
     }()
-    public var itemAniamtionType: LRTabBarItemAnimationType = .none
+    @objc public var itemAniamtionType: LRTabBarItemAnimationType = .none
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white

@@ -1,18 +1,18 @@
 import UIKit
 @objcMembers
 open class LRGradientBorderView: UIView {
-    public var isGradientBorderEnable: Bool = false
-    @IBInspectable public var startColor: UIColor = UIColor.clear
-    @IBInspectable public var endColor: UIColor = UIColor.clear
-    @IBInspectable public var startPoint: CGPoint = CGPoint.zero
-    @IBInspectable public var endPoint: CGPoint = CGPoint.zero
-    @IBInspectable public var locations: CGPoint = CGPoint.zero
-    @IBInspectable public var gborderWidth: CGFloat = 0 {
+    @objc public var isGradientBorderEnable: Bool = false
+    @objc @IBInspectable public var startColor: UIColor = UIColor.clear
+    @objc @IBInspectable public var endColor: UIColor = UIColor.clear
+    @objc @IBInspectable public var startPoint: CGPoint = CGPoint.zero
+    @objc @IBInspectable public var endPoint: CGPoint = CGPoint.zero
+    @objc @IBInspectable public var locations: CGPoint = CGPoint.zero
+    @objc @IBInspectable public var gborderWidth: CGFloat = 0 {
         didSet {
             self.shapeLayer.borderWidth = gborderWidth
         }
     }
-    @IBInspectable public var gCornerRadius: CGFloat {
+    @objc @IBInspectable public var gCornerRadius: CGFloat {
         set {
             self.layer.cornerRadius = newValue
         }
@@ -20,8 +20,8 @@ open class LRGradientBorderView: UIView {
             return self.layer.cornerRadius
         }
     }
-    public var customLocations: [NSNumber] = []
-    public var customColors: [UIColor] = []
+    @objc public var customLocations: [NSNumber] = []
+    @objc public var customColors: [UIColor] = []
     fileprivate var gradientLayer: CAGradientLayer = CAGradientLayer()
     fileprivate var shapeLayer: CAShapeLayer = CAShapeLayer()
     open override func layoutSubviews() {

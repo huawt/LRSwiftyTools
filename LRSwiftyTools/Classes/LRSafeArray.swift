@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
-public extension NSArray{
-    func safeObjectAtIndex(_ index: Int) -> Any? {
+@objc public extension NSArray {
+    @objc func safeObjectAtIndex(_ index: Int) -> Any? {
         if index < self.count && index >= 0 {
             return self[index]
         } else {
