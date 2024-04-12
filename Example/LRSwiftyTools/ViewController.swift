@@ -18,6 +18,12 @@ class ViewController: UIViewController {
         let h = LRHoleView(frame: self.view.bounds)
         h.config = LRHoleConfig(rect: CGRect(x: 100, y: 100, width: 100, height: 100), corners: [.allCorners], cornerRadii:CGSize(width: 50, height: 50), fillColor: .red, strokeColor: .yellow)
         self.view.addSubview(h)
+        
+        let lable = UILabel(frame: CGRect(x: 0, y: 300, width: self.view.bounds.width, height: 100));
+        lable.text = "Do any additional setup after loading the view, typically from a nib.Do any additional setup after loading the view, typically from a nib."
+        lable.numberOfLines = 0;
+        lable.lineSpace = 20;
+        self.view.addSubview(lable)
     }
 
     override func didReceiveMemoryWarning() {

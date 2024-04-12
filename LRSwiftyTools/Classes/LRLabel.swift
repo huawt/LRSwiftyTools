@@ -4,9 +4,9 @@ import UIKit
 
 @objc extension UILabel {
     struct AssociatedKeys {
-        static var lineSpacingKey = "textSpacingKey"
+        static var lineSpacingKey = "lineSpacingKey"
     }
-    @objc @IBInspectable var lineSpacing: CGFloat {
+    @objc @IBInspectable open var lineSpace: CGFloat {
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.lineSpacingKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
@@ -14,12 +14,11 @@ import UIKit
             return (objc_getAssociatedObject(self, &AssociatedKeys.lineSpacingKey) as? CGFloat) ?? 0
         }
     }
-    
     open override func layoutSubviews() {
         super.layoutSubviews()
-        guard lineSpacing > 0, let text = text, text.isEmpty == false else { return }
+        guard self.lineSpace > 0, let text = self.text, text.isEmpty == false else { return }
         let style = NSMutableParagraphStyle()
-        style.lineSpacing = lineSpacing
+        style.lineSpacing = self.lineSpace
         style.alignment = self.textAlignment
         self.attributedText = NSAttributedString(string: text, attributes: [.font: self.font as Any, .foregroundColor: self.textColor as Any, .paragraphStyle: style])
     }
