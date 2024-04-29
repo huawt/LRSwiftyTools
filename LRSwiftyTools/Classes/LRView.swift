@@ -7,13 +7,6 @@ import UIKit
         shape.path = maskPath.cgPath
         layer.mask = shape
     }
-    @objc func addShadow(_ color: UIColor = UIColor.black, radius: CGFloat = 4, offset: CGSize = .zero, opacity: Float = 0.5) {
-        layer.shadowColor = color.cgColor
-        layer.shadowOffset = offset
-        layer.shadowRadius = radius
-        layer.shadowOpacity = opacity
-        layer.masksToBounds = false
-    }
     @objc @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -45,14 +38,38 @@ import UIKit
             return layer.shadowRadius
         }
         set {
-            layer.shadowOffset = CGSize.zero
-            layer.shadowColor = UIColor.black.cgColor
-            layer.shadowOpacity = 0.5
             layer.shadowRadius = newValue
         }
     }
-}
-@objc public extension UIView {
+    @objc @IBInspectable var shadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    @objc @IBInspectable var shadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+    @objc @IBInspectable var shadowColor: UIColor {
+        get {
+            return UIColor(cgColor: layer.shadowColor ?? UIColor.clear.cgColor)
+        }
+        set {
+            layer.shadowColor = newValue.cgColor
+        }
+    }
+    @objc func removeALLSubviews() {
+        self.subviews.forEach { subview in
+            subview.removeFromSuperview()
+        }
+    }
     @objc var viewController: UIViewController? {
         var responder: UIResponder = self
         while let next = responder.next {
@@ -62,18 +79,5 @@ import UIKit
             responder = next
         }
         return nil
-    }
-}
-@objc extension UIView {
-    @objc public func shadow(color: UIColor = UIColor.black.withAlphaComponent(0.5), offset: CGSize = CGSize(width: 0, height: 1), opacity: CGFloat = 1, radius: CGFloat = 2) {
-        self.layer.shadowColor = color.cgColor
-        self.layer.shadowOffset = offset
-        self.layer.shadowOpacity = Float(opacity)
-        self.layer.shadowRadius = radius
-    }
-    @objc public func removeALLSubviews() {
-        self.subviews.forEach { subview in
-            subview.removeFromSuperview()
-        }
     }
 }

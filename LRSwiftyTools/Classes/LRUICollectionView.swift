@@ -2,9 +2,8 @@ import Foundation
 import UIKit
 public extension UICollectionView {
     func reloadData(_ completion: @escaping () -> Void) {
-        UIView.animate(withDuration: 0,
-                       animations: {
-                        self.reloadData()
+        UIView.animate(withDuration: 0, animations: {
+            self.reloadData()
         }, completion: { _ in
             completion()
         })
