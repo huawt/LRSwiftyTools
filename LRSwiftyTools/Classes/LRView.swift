@@ -41,33 +41,12 @@ import UIKit
             layer.shadowRadius = newValue
         }
     }
-    @objc @IBInspectable var shadowOpacity: Float {
+    @objc @IBInspectable var shadowOpacity: CGFloat {
         get {
-            return layer.shadowOpacity
+            return CGFloat(layer.shadowOpacity)
         }
         set {
-            layer.shadowOpacity = newValue
-        }
-    }
-    @objc @IBInspectable var shadowOffset: CGSize {
-        get {
-            return layer.shadowOffset
-        }
-        set {
-            layer.shadowOffset = newValue
-        }
-    }
-    @objc @IBInspectable var shadowColor: UIColor {
-        get {
-            return UIColor(cgColor: layer.shadowColor ?? UIColor.clear.cgColor)
-        }
-        set {
-            layer.shadowColor = newValue.cgColor
-        }
-    }
-    @objc func removeALLSubviews() {
-        self.subviews.forEach { subview in
-            subview.removeFromSuperview()
+            layer.shadowOpacity = Float(newValue)
         }
     }
     @objc var viewController: UIViewController? {
@@ -79,5 +58,10 @@ import UIKit
             responder = next
         }
         return nil
+    }
+    @objc func removeALLSubviews() {
+        self.subviews.forEach { subview in
+            subview.removeFromSuperview()
+        }
     }
 }
