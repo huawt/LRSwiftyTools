@@ -33,22 +33,6 @@ import UIKit
             layer.borderColor = newValue.cgColor
         }
     }
-    @objc @IBInspectable var shadowRadius: CGFloat {
-        get {
-            return layer.shadowRadius
-        }
-        set {
-            layer.shadowRadius = newValue
-        }
-    }
-    @objc @IBInspectable var shadowOpacity: CGFloat {
-        get {
-            return CGFloat(layer.shadowOpacity)
-        }
-        set {
-            layer.shadowOpacity = Float(newValue)
-        }
-    }
     @objc var viewController: UIViewController? {
         var responder: UIResponder = self
         while let next = responder.next {

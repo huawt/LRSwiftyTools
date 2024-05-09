@@ -7,137 +7,139 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0118305BF4413218D8FD0927388197E8 /* LRBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA10B524484DE97F62688E9B7E8A1E /* LRBaseTabBarController.swift */; };
-		014207EFC7A5768AA0FE82071622164B /* LRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39325E16F9BABAC94865F57CA224C7B1 /* LRData.swift */; };
 		03D64C89C565696558288253D1C9C5C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		08254DDB801A0F43D614CF92AD95BB36 /* LRReuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EB7A8270FA8F55C563E9847B7F8D59 /* LRReuseable.swift */; };
-		0B05CE0113E699F2610910B7F5DB2870 /* LRUnselectableTappableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633603FD84DA37FB2D95EBE5BBD4C6BA /* LRUnselectableTappableTextView.swift */; };
+		0D82B70D8B5EB97BCAF885642B858F22 /* LRAutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297724D802DB02E80915A935493D12 /* LRAutoScrollLabel.swift */; };
+		0DF17EA399ADBA8074F112FAB7B84C15 /* LRRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB3E5F223D0F906974B4F4175C72657 /* LRRegex.swift */; };
+		13FCFDF19AD15C740FA7B91B14DFE6C8 /* LRCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226C3E8FE3A4CEFEF88101A68E6392E /* LRCountDown.swift */; };
 		1504BD2C39A6455D467AFDC389DABE8A /* Pods-LRSwiftyTools_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E3EF9E09BB2E74EE3EDF49913AA84E /* Pods-LRSwiftyTools_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		16DCC44CC814D6FC9D2841D7895E01FF /* LRUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB99B222FC4D15660521F965EF49BC4 /* LRUITableView.swift */; };
+		1C6C64D44096F825E5D66B122F7299FF /* LRRAirSandBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FECC9F7FAA78D1F0DE281F8423FD7D2 /* LRRAirSandBox.swift */; };
 		24F4C8A6ACFB76A4B943AB0F88F7C34C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		25967C881874CA6CAC7E0A88C3A22738 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		2946525426D9D2FF9E5659DD11A094E4 /* LRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3A65D9F3657099838ABE08F378362 /* LRButton.swift */; };
+		29AA340D8E6A5B8BA397670CD1349B2E /* LRReuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4505E8CB3E2E5E984D80BB4350C1A535 /* LRReuseable.swift */; };
+		2B1E7FF17E3504C3407EF97DB00E148C /* LRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE3BCA09DB32E7A52D651F3D06D4BD /* LRView.swift */; };
 		2DF5E22F66C09212DDDD540D8F7BA531 /* Pods-LRSwiftyTools_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A79B1B05C825DA12F88BAA9921819E3F /* Pods-LRSwiftyTools_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		321D01C034023A7C2DFDF48A512CB04F /* LRRAirSandBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2145EE0B15F5ADACAA48807AA5324C8 /* LRRAirSandBox.swift */; };
-		3D4D75846A734914701611D049117B9C /* LRRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C77091E2EE320984BB76BBB4BB5F40 /* LRRegex.swift */; };
-		40DED5F510200B3CC55F274052EBCE48 /* LRTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A821D4618F4A281492D021B28EDB554 /* LRTimer.swift */; };
-		4524786488FDE32A224161C1579E6ACB /* LRDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B7ECA5FD765E44855CB6535ED85CF8 /* LRDate.swift */; };
-		5139B50F86E29A5829B703FCEECCFBCF /* LRCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9024C4E55A8928297F89C30CDC58E4 /* LRCountDown.swift */; };
-		519465A560591FCB137467203FD3CBEF /* LRLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A69F6AE9CB6CDD4BB5EFED12D920B57 /* LRLabel.swift */; };
-		524C60698B3869460932A6F8A03439DC /* LRWeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC05633AAB8364C1892DD08D2AEF33F /* LRWeakSet.swift */; };
-		5A5356729F44B1EC857F16E2210114C2 /* LRGCDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EE47D26A54F21BE211D8C341C561E8 /* LRGCDHelper.swift */; };
-		5F4AAAB0F425F0A884029C54654EA036 /* LRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8E46114D60F992D086C5EDEC66DBF /* LRColor.swift */; };
-		65DD8CD7BA5AB7EDBF4FC170EAA47450 /* LRArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6C6735E55C62EA2238C08875BD36B /* LRArray.swift */; };
-		6D0082B4614F7A6652718B699EA34F9A /* LRUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7257FCDE2250D50417E13C000E8F60 /* LRUICollectionView.swift */; };
-		6DC838D3DA6B064F1D228A72F8A8868C /* LRTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD236041B63DD2A894A30350FFE73E /* LRTextView.swift */; };
-		6E0E0D144A1C73FA8A5C16B99167D9DF /* LRUIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA785198BE3774D982C69EFD96ED007 /* LRUIStoryboard.swift */; };
-		7339B4B88E2816496D9A78EC6D0DBBE2 /* LRPingFangFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C79E9EE73E799B00B667C0EE6457F /* LRPingFangFont.swift */; };
+		31DBA1C1E2C03038E7DC641D5F0702AB /* LRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992EE1FA5EECC2BC65B611FD8A1E2092 /* LRString.swift */; };
+		34ABE426F3EF7E06A409691264E1E0E8 /* LRGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12EB5EAA76B35A474175E3FECFB103 /* LRGradientButton.swift */; };
+		365A152D1B61C8696F223E0945299083 /* LRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED309DC0A4F867CBDDB9453E0D22C048 /* LRController.swift */; };
+		36C21967D87D53422AB9183E2DCEDAFA /* LRUILayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239B62F0B1A5B2838543917D25C66B9 /* LRUILayoutButton.swift */; };
+		3E95B0A7458E2EFFDE9662F9FBB253D5 /* LRDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC1E789C005DF0389D8320E7667FB6 /* LRDouble.swift */; };
+		42D87FAB09A1E429355E13777227F029 /* LRTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9DCED00AC03BA6463A0D61CCCBA4BD /* LRTextView.swift */; };
+		466CCD309CF33BDAD763E7A5B9AF6766 /* LRSwiftyTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE732D46950B869BC384B32CD08FCBE4 /* LRSwiftyTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B5937F42452D43353DE35027282F635 /* LRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54150E70EE70D472DF23A1C2347594CD /* LRColor.swift */; };
+		6F181FB3A427BAE46CAA9115A64FEEDD /* LRPHAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0415B1030B762DE935A8D7BD356FFBC /* LRPHAsset.swift */; };
 		7438F986511E6B52FBF9CF92ACA1F86E /* Pods-LRSwiftyTools_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4700F7C30AD41C37A54F5CB0B787DDE5 /* Pods-LRSwiftyTools_Example-dummy.m */; };
-		91165A1DD1B5FAB27E5F3DD91BED00A1 /* LRAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF242F505A9C1CABDCE7DC4AA2EC404 /* LRAudioPlayer.swift */; };
-		957E6D6258AB546749C078DAED1B6D2A /* LRURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012419FDBA8DAC161CF513C85600206 /* LRURL.swift */; };
-		96C5D126B85DE44460B1C96F746760C2 /* LRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF65C79C6A5995F8A42F29EBE51DF7B /* LRView.swift */; };
-		A97CD2C1C3CDE5AB92BBBFCC726A09E9 /* LRDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE971F722BA9ECA76BA1E69D9B365D /* LRDouble.swift */; };
-		A9EDDD80E89F5DDF0BB036EA4B3223C1 /* LRSwiftyTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0044536B043366C2F6F1093FF8CFFD /* LRSwiftyTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE4400210D08C6F535E3462519E8F108 /* LRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A35AB76B9FE8CBA508A631383B2DB /* LRImage.swift */; };
-		AEC06788F8C944275AEAE616E5A7EF74 /* LRAutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A96A4E8E2AC894E34EB680577225F3 /* LRAutoScrollLabel.swift */; };
+		75C93BD1609538E78918678533C356B4 /* LRSwiftyTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE15D8ACEEC106C5ECFE7E0BD95A8028 /* LRSwiftyTools-dummy.m */; };
+		813CFE62B6EB41868A18537734188AA7 /* LRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1362A32F45078D3368FE2C3956EB3E /* LRImage.swift */; };
+		8623007F4ADB92ECF3E33EC0BE1C50EA /* LRHoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E245A489B55F346BEB512B3C7B1740C /* LRHoleView.swift */; };
+		8BD3DDDB050E2522C328D5497D905A56 /* LRGCDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC211E70B1EDDF43CF8805B1FAB16875 /* LRGCDHelper.swift */; };
+		9A839EEF822BDB585543DEA5DDC50C7E /* LRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01F54A90F9ED318CE0C81F33F4C995 /* LRData.swift */; };
+		9CAF86E7D535CE55CDED01E19A0958B5 /* LRArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A88BCB07ADDAFB578765B5064889501 /* LRArray.swift */; };
+		A56A96D4E062DE28C9C2898E65F3173A /* LRUnselectableTappableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85454377D1E99BFB42CF1AA809CFE802 /* LRUnselectableTappableTextView.swift */; };
+		AF4F8E7AF416E7FD09999DD7CB86DC4B /* LRBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC786082405FCBFF4B261D3B5FFCEE /* LRBaseTabBarController.swift */; };
+		B178C4D047EB5726601CC752003415FE /* LRAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2607C1D5ED9D38D923CEF5326D614629 /* LRAudioPlayer.swift */; };
+		B2173E09DD80D52A3B652D357CA70F9A /* LRDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D5CB4FC82424CC4BB6D72DFE53EAE8 /* LRDLog.swift */; };
 		B56CBE43C71C5E3207AC70528F25DE52 /* Pods-LRSwiftyTools_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2C768DC324C38905364EA18044EA63 /* Pods-LRSwiftyTools_Tests-dummy.m */; };
-		BA3BDC3BB5C439BF26B3608363714515 /* LRSwiftyTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57C4BB1B89B50981E2AD93681AFB966 /* LRSwiftyTools.swift */; };
-		BA69C7E866CF4A78CB2F58BCB882EBE0 /* LRSafeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2BC74ECE0DD86B017B54D022DB1819 /* LRSafeArray.swift */; };
-		BF5EE9D7889EF590AB513F61AFD72444 /* LRPHAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F5A10BC7B46103B0F89DDEB77414E6 /* LRPHAsset.swift */; };
-		C09A86BEBA39F23C5792F4F9F15FEF40 /* LRHoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6943B689A569948934C99F1395A08F1A /* LRHoleView.swift */; };
-		C6304A184AB2072FCBEB3E8E427DC0BF /* LRGradientBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3561C232923F6F2E679D9894A9A45 /* LRGradientBorderView.swift */; };
-		EC242CAB5E8C4B25062936D419F6EB57 /* LRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B36886ABDBC64A5BD93A6F194FAA2D /* LRController.swift */; };
-		EF07F71E55EADD99CF7BF4ED80067648 /* LRSwiftyTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C34378E0702D869D7C5A2AE84B971 /* LRSwiftyTools-dummy.m */; };
-		EFD998614714C208B2DCD90AD333E6DA /* LRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4576F0DBD7D4F80D1D9E404D36CDAB9 /* LRString.swift */; };
-		F4340D0AAFC8818A1102B8DA20652B87 /* LRCollectionColorFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3F88D83D9F6E97292A4AE0D3C13A44 /* LRCollectionColorFlowLayout.swift */; };
-		F4E73A5570DEB6D8A5BA9EFADD506E96 /* LRDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D7CED1A035A44B9F2345A04E0D396D /* LRDLog.swift */; };
+		B5D73E998367D00E4E8BA08ACB28CED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C01EBD2E69EF01CC773430873A904D47 /* LRGradientBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11E10C05034F3A21A912C2488B3937 /* LRGradientBorderView.swift */; };
+		D92D25D1CF35FAA7A12009FCB4EBEFC4 /* LRPingFangFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E4DA211F5D6CC98B17BB4A53C86B07 /* LRPingFangFont.swift */; };
+		D9B8F3A88486290DA330E716944D4FAD /* LRCollectionColorFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A054BBF61FA854E7AAEB129BB4D0E7E /* LRCollectionColorFlowLayout.swift */; };
+		DAC733C6E2314D224D3EA5453FF0398F /* LRSafeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AD66FB01209D7AD7FEF12968C6A2C /* LRSafeArray.swift */; };
+		DE2D04533D283507ADAEE3B3E96C5551 /* LRURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E8983E5456BC04F680B0B8E71C163 /* LRURL.swift */; };
+		E1164F1B86630DA4B04BA04E611BBE52 /* LRUIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE59C86710ACF5907BBD49B6EB9B2DF /* LRUIStoryboard.swift */; };
+		E3171104F7A8669528A82CBE2AE2802F /* LRTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1022554329ED27C151937C370C4942 /* LRTimer.swift */; };
+		E88CCA392DA17C0AE5CCF7B1835D546A /* LRUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA5D891A26F778C47867448997F731 /* LRUITableView.swift */; };
+		EC8ED59D0C6B9708B0C6396A6E0C7048 /* LRDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C26699C30B97354073BE5F22ED2A87A /* LRDate.swift */; };
+		F136F0ECEC9B28929401A91FA98F40D7 /* LRUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A31B0AA2505B04E453FF2530108F1E /* LRUICollectionView.swift */; };
+		F422F23221833F0D0EF903CF601DF481 /* LRWeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B54327042DE2759E56F0EE8A97D212 /* LRWeakSet.swift */; };
+		FC715FDB6B65C02894D08BFC805505C2 /* LRSwiftyTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25FA2D17E5C457946C53F68D81955E /* LRSwiftyTools.swift */; };
+		FCAFE1E9EA66E6DB3FFFF70D0AA4DD7A /* LRLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8BA8C697DFDE76972C6CDA3314E0E /* LRLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		11F38AF545968D2214998F9B1CAB980B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B648DAA2A838DFBA06A577720D4C7A0D;
-			remoteInfo = LRSwiftyTools;
-		};
-		B4E878F0E12473C7CAD075A7FE060DBB /* PBXContainerItemProxy */ = {
+		1005A0E133B8465BC5CDA7A4C6598AAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9A5D5CD387F78BC10230BAE7FA7C6B49;
 			remoteInfo = "Pods-LRSwiftyTools_Example";
 		};
+		E5AF4125E22700964EB9B15ABE481F7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B648DAA2A838DFBA06A577720D4C7A0D;
+			remoteInfo = LRSwiftyTools;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07C77091E2EE320984BB76BBB4BB5F40 /* LRRegex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRRegex.swift; path = LRSwiftyTools/Classes/LRRegex.swift; sourceTree = "<group>"; };
+		06FA5D891A26F778C47867448997F731 /* LRUITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUITableView.swift; path = LRSwiftyTools/Classes/LRUITableView.swift; sourceTree = "<group>"; };
 		09DB3A1E7B80FB1106FD096361AA7984 /* Pods-LRSwiftyTools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LRSwiftyTools_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0CCE7FAC1B22630889B3C39ACDA6B9FB /* LRSwiftyTools-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LRSwiftyTools-Info.plist"; sourceTree = "<group>"; };
+		0C1362A32F45078D3368FE2C3956EB3E /* LRImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRImage.swift; path = LRSwiftyTools/Classes/LRImage.swift; sourceTree = "<group>"; };
 		0D41313590BAB93788A6E4EE42B02BC9 /* Pods-LRSwiftyTools_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LRSwiftyTools_Example.modulemap"; sourceTree = "<group>"; };
-		0F2BC74ECE0DD86B017B54D022DB1819 /* LRSafeArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRSafeArray.swift; path = LRSwiftyTools/Classes/LRSafeArray.swift; sourceTree = "<group>"; };
-		0FF242F505A9C1CABDCE7DC4AA2EC404 /* LRAudioPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRAudioPlayer.swift; path = LRSwiftyTools/Classes/LRAudioPlayer.swift; sourceTree = "<group>"; };
-		2A0B74A5064A4363A03BA5807BE669D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		2A3F88D83D9F6E97292A4AE0D3C13A44 /* LRCollectionColorFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRCollectionColorFlowLayout.swift; path = LRSwiftyTools/Classes/LRCollectionColorFlowLayout.swift; sourceTree = "<group>"; };
-		2A69F6AE9CB6CDD4BB5EFED12D920B57 /* LRLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRLabel.swift; path = LRSwiftyTools/Classes/LRLabel.swift; sourceTree = "<group>"; };
-		2BA483A61D265C46A866DF52518C8CD5 /* LRSwiftyTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LRSwiftyTools.release.xcconfig; sourceTree = "<group>"; };
+		0E1022554329ED27C151937C370C4942 /* LRTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRTimer.swift; path = LRSwiftyTools/Classes/LRTimer.swift; sourceTree = "<group>"; };
+		20206B56D60D7ED24058C37F8FB513EA /* LRSwiftyTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LRSwiftyTools.release.xcconfig; sourceTree = "<group>"; };
+		2607C1D5ED9D38D923CEF5326D614629 /* LRAudioPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRAudioPlayer.swift; path = LRSwiftyTools/Classes/LRAudioPlayer.swift; sourceTree = "<group>"; };
+		2A25FA2D17E5C457946C53F68D81955E /* LRSwiftyTools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRSwiftyTools.swift; path = LRSwiftyTools/Classes/LRSwiftyTools.swift; sourceTree = "<group>"; };
+		2BB3E5F223D0F906974B4F4175C72657 /* LRRegex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRRegex.swift; path = LRSwiftyTools/Classes/LRRegex.swift; sourceTree = "<group>"; };
+		2C26699C30B97354073BE5F22ED2A87A /* LRDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRDate.swift; path = LRSwiftyTools/Classes/LRDate.swift; sourceTree = "<group>"; };
+		3239B62F0B1A5B2838543917D25C66B9 /* LRUILayoutButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUILayoutButton.swift; path = LRSwiftyTools/Classes/LRUILayoutButton.swift; sourceTree = "<group>"; };
 		352F1C363A2A4A388B1200B508981B1A /* Pods-LRSwiftyTools_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LRSwiftyTools_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		39325E16F9BABAC94865F57CA224C7B1 /* LRData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRData.swift; path = LRSwiftyTools/Classes/LRData.swift; sourceTree = "<group>"; };
-		3BD6C6735E55C62EA2238C08875BD36B /* LRArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRArray.swift; path = LRSwiftyTools/Classes/LRArray.swift; sourceTree = "<group>"; };
-		4012419FDBA8DAC161CF513C85600206 /* LRURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRURL.swift; path = LRSwiftyTools/Classes/LRURL.swift; sourceTree = "<group>"; };
+		4505E8CB3E2E5E984D80BB4350C1A535 /* LRReuseable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRReuseable.swift; path = LRSwiftyTools/Classes/LRReuseable.swift; sourceTree = "<group>"; };
 		4700F7C30AD41C37A54F5CB0B787DDE5 /* Pods-LRSwiftyTools_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LRSwiftyTools_Example-dummy.m"; sourceTree = "<group>"; };
 		4747ADF100ADC3117FF4B27BB7E08E8C /* Pods-LRSwiftyTools_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LRSwiftyTools_Tests-Info.plist"; sourceTree = "<group>"; };
-		4AD879054B126DAC5FA83A2DC736A61E /* LRSwiftyTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LRSwiftyTools.debug.xcconfig; sourceTree = "<group>"; };
-		55A96A4E8E2AC894E34EB680577225F3 /* LRAutoScrollLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRAutoScrollLabel.swift; path = LRSwiftyTools/Classes/LRAutoScrollLabel.swift; sourceTree = "<group>"; };
-		57D3561C232923F6F2E679D9894A9A45 /* LRGradientBorderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRGradientBorderView.swift; path = LRSwiftyTools/Classes/LRGradientBorderView.swift; sourceTree = "<group>"; };
-		58B36886ABDBC64A5BD93A6F194FAA2D /* LRController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRController.swift; path = LRSwiftyTools/Classes/LRController.swift; sourceTree = "<group>"; };
-		5BC05633AAB8364C1892DD08D2AEF33F /* LRWeakSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRWeakSet.swift; path = LRSwiftyTools/Classes/LRWeakSet.swift; sourceTree = "<group>"; };
-		5E7206BC8C608E10C84C391169624160 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		633603FD84DA37FB2D95EBE5BBD4C6BA /* LRUnselectableTappableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUnselectableTappableTextView.swift; path = LRSwiftyTools/Classes/LRUnselectableTappableTextView.swift; sourceTree = "<group>"; };
+		4BE2156A71D4DDEF5992FD674C67FB3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4F12EB5EAA76B35A474175E3FECFB103 /* LRGradientButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRGradientButton.swift; path = LRSwiftyTools/Classes/LRGradientButton.swift; sourceTree = "<group>"; };
+		5226C3E8FE3A4CEFEF88101A68E6392E /* LRCountDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRCountDown.swift; path = LRSwiftyTools/Classes/LRCountDown.swift; sourceTree = "<group>"; };
+		54150E70EE70D472DF23A1C2347594CD /* LRColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRColor.swift; path = LRSwiftyTools/Classes/LRColor.swift; sourceTree = "<group>"; };
+		55B54327042DE2759E56F0EE8A97D212 /* LRWeakSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRWeakSet.swift; path = LRSwiftyTools/Classes/LRWeakSet.swift; sourceTree = "<group>"; };
+		59E4DA211F5D6CC98B17BB4A53C86B07 /* LRPingFangFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRPingFangFont.swift; path = LRSwiftyTools/Classes/LRPingFangFont.swift; sourceTree = "<group>"; };
+		5A88BCB07ADDAFB578765B5064889501 /* LRArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRArray.swift; path = LRSwiftyTools/Classes/LRArray.swift; sourceTree = "<group>"; };
 		665B9D7BA8BE4D8228F8E575378272CC /* Pods-LRSwiftyTools_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LRSwiftyTools_Tests"; path = Pods_LRSwiftyTools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		67FD236041B63DD2A894A30350FFE73E /* LRTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRTextView.swift; path = LRSwiftyTools/Classes/LRTextView.swift; sourceTree = "<group>"; };
-		6943B689A569948934C99F1395A08F1A /* LRHoleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRHoleView.swift; path = LRSwiftyTools/Classes/LRHoleView.swift; sourceTree = "<group>"; };
-		6BB99B222FC4D15660521F965EF49BC4 /* LRUITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUITableView.swift; path = LRSwiftyTools/Classes/LRUITableView.swift; sourceTree = "<group>"; };
-		70EE47D26A54F21BE211D8C341C561E8 /* LRGCDHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRGCDHelper.swift; path = LRSwiftyTools/Classes/LRGCDHelper.swift; sourceTree = "<group>"; };
 		729828A704AA84778A7344385D2C4154 /* LRSwiftyTools */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LRSwiftyTools; path = LRSwiftyTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		79CE971F722BA9ECA76BA1E69D9B365D /* LRDouble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRDouble.swift; path = LRSwiftyTools/Classes/LRDouble.swift; sourceTree = "<group>"; };
-		81038536DAD4F641A5AF3357625E53F3 /* LRSwiftyTools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LRSwiftyTools.modulemap; sourceTree = "<group>"; };
-		82CA10B524484DE97F62688E9B7E8A1E /* LRBaseTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRBaseTabBarController.swift; path = LRSwiftyTools/Classes/LRBaseTabBarController.swift; sourceTree = "<group>"; };
+		7A054BBF61FA854E7AAEB129BB4D0E7E /* LRCollectionColorFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRCollectionColorFlowLayout.swift; path = LRSwiftyTools/Classes/LRCollectionColorFlowLayout.swift; sourceTree = "<group>"; };
+		7E245A489B55F346BEB512B3C7B1740C /* LRHoleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRHoleView.swift; path = LRSwiftyTools/Classes/LRHoleView.swift; sourceTree = "<group>"; };
+		80BCF23AD8B79377D0DECA59429B625D /* LRSwiftyTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LRSwiftyTools-prefix.pch"; sourceTree = "<group>"; };
 		83310422D187212661E8705E893D005E /* Pods-LRSwiftyTools_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LRSwiftyTools_Tests.modulemap"; sourceTree = "<group>"; };
+		85454377D1E99BFB42CF1AA809CFE802 /* LRUnselectableTappableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUnselectableTappableTextView.swift; path = LRSwiftyTools/Classes/LRUnselectableTappableTextView.swift; sourceTree = "<group>"; };
 		85B527E70509E3AB1A944DD5169B882A /* Pods-LRSwiftyTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LRSwiftyTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8A5C34378E0702D869D7C5A2AE84B971 /* LRSwiftyTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LRSwiftyTools-dummy.m"; sourceTree = "<group>"; };
-		8A821D4618F4A281492D021B28EDB554 /* LRTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRTimer.swift; path = LRSwiftyTools/Classes/LRTimer.swift; sourceTree = "<group>"; };
-		90E8E46114D60F992D086C5EDEC66DBF /* LRColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRColor.swift; path = LRSwiftyTools/Classes/LRColor.swift; sourceTree = "<group>"; };
+		8FECC9F7FAA78D1F0DE281F8423FD7D2 /* LRRAirSandBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRRAirSandBox.swift; path = LRSwiftyTools/Classes/LRRAirSandBox.swift; sourceTree = "<group>"; };
+		930AD66FB01209D7AD7FEF12968C6A2C /* LRSafeArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRSafeArray.swift; path = LRSwiftyTools/Classes/LRSafeArray.swift; sourceTree = "<group>"; };
+		99297724D802DB02E80915A935493D12 /* LRAutoScrollLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRAutoScrollLabel.swift; path = LRSwiftyTools/Classes/LRAutoScrollLabel.swift; sourceTree = "<group>"; };
+		992EE1FA5EECC2BC65B611FD8A1E2092 /* LRString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRString.swift; path = LRSwiftyTools/Classes/LRString.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EA785198BE3774D982C69EFD96ED007 /* LRUIStoryboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUIStoryboard.swift; path = LRSwiftyTools/Classes/LRUIStoryboard.swift; sourceTree = "<group>"; };
-		9ED3A65D9F3657099838ABE08F378362 /* LRButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRButton.swift; path = LRSwiftyTools/Classes/LRButton.swift; sourceTree = "<group>"; };
+		9DE59C86710ACF5907BBD49B6EB9B2DF /* LRUIStoryboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUIStoryboard.swift; path = LRSwiftyTools/Classes/LRUIStoryboard.swift; sourceTree = "<group>"; };
 		A6187B7FB07B6ED2E8C476F0B659122E /* Pods-LRSwiftyTools_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LRSwiftyTools_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A71A35AB76B9FE8CBA508A631383B2DB /* LRImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRImage.swift; path = LRSwiftyTools/Classes/LRImage.swift; sourceTree = "<group>"; };
 		A79B1B05C825DA12F88BAA9921819E3F /* Pods-LRSwiftyTools_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LRSwiftyTools_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A9EB7A8270FA8F55C563E9847B7F8D59 /* LRReuseable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRReuseable.swift; path = LRSwiftyTools/Classes/LRReuseable.swift; sourceTree = "<group>"; };
-		AB9024C4E55A8928297F89C30CDC58E4 /* LRCountDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRCountDown.swift; path = LRSwiftyTools/Classes/LRCountDown.swift; sourceTree = "<group>"; };
-		ADE42B4492D8E5F6A8E84E0C7A8BC96A /* LRSwiftyTools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LRSwiftyTools.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B57C4BB1B89B50981E2AD93681AFB966 /* LRSwiftyTools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRSwiftyTools.swift; path = LRSwiftyTools/Classes/LRSwiftyTools.swift; sourceTree = "<group>"; };
+		AD9DCED00AC03BA6463A0D61CCCBA4BD /* LRTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRTextView.swift; path = LRSwiftyTools/Classes/LRTextView.swift; sourceTree = "<group>"; };
+		B5AC786082405FCBFF4B261D3B5FFCEE /* LRBaseTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRBaseTabBarController.swift; path = LRSwiftyTools/Classes/LRBaseTabBarController.swift; sourceTree = "<group>"; };
 		B5E3EF9E09BB2E74EE3EDF49913AA84E /* Pods-LRSwiftyTools_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LRSwiftyTools_Example-umbrella.h"; sourceTree = "<group>"; };
-		BAF65C79C6A5995F8A42F29EBE51DF7B /* LRView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRView.swift; path = LRSwiftyTools/Classes/LRView.swift; sourceTree = "<group>"; };
-		C1F5A10BC7B46103B0F89DDEB77414E6 /* LRPHAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRPHAsset.swift; path = LRSwiftyTools/Classes/LRPHAsset.swift; sourceTree = "<group>"; };
+		BD0E8983E5456BC04F680B0B8E71C163 /* LRURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRURL.swift; path = LRSwiftyTools/Classes/LRURL.swift; sourceTree = "<group>"; };
+		BE732D46950B869BC384B32CD08FCBE4 /* LRSwiftyTools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LRSwiftyTools-umbrella.h"; sourceTree = "<group>"; };
 		C3AF861910BD2C42039E877BE1C8CB05 /* Pods-LRSwiftyTools_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LRSwiftyTools_Example-Info.plist"; sourceTree = "<group>"; };
 		C7144DAECFC91E3ABBDDA4B32F9E5B94 /* Pods-LRSwiftyTools_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LRSwiftyTools_Example"; path = Pods_LRSwiftyTools_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C926AADA70B61D7AEE691585879D5C7D /* Pods-LRSwiftyTools_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LRSwiftyTools_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C956CCBD44817B4882A42A03F480B9C5 /* Pods-LRSwiftyTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LRSwiftyTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC2C768DC324C38905364EA18044EA63 /* Pods-LRSwiftyTools_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LRSwiftyTools_Tests-dummy.m"; sourceTree = "<group>"; };
-		D0BA4335C2F0858A4973EA222360E99A /* LRSwiftyTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LRSwiftyTools-prefix.pch"; sourceTree = "<group>"; };
-		D2145EE0B15F5ADACAA48807AA5324C8 /* LRRAirSandBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRRAirSandBox.swift; path = LRSwiftyTools/Classes/LRRAirSandBox.swift; sourceTree = "<group>"; };
-		D6D7CED1A035A44B9F2345A04E0D396D /* LRDLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRDLog.swift; path = LRSwiftyTools/Classes/LRDLog.swift; sourceTree = "<group>"; };
+		CE11E10C05034F3A21A912C2488B3937 /* LRGradientBorderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRGradientBorderView.swift; path = LRSwiftyTools/Classes/LRGradientBorderView.swift; sourceTree = "<group>"; };
+		CE15D8ACEEC106C5ECFE7E0BD95A8028 /* LRSwiftyTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LRSwiftyTools-dummy.m"; sourceTree = "<group>"; };
+		D0415B1030B762DE935A8D7BD356FFBC /* LRPHAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRPHAsset.swift; path = LRSwiftyTools/Classes/LRPHAsset.swift; sourceTree = "<group>"; };
+		D4D5CB4FC82424CC4BB6D72DFE53EAE8 /* LRDLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRDLog.swift; path = LRSwiftyTools/Classes/LRDLog.swift; sourceTree = "<group>"; };
 		D8B910517D9504129C76CB1429F1BD54 /* Pods-LRSwiftyTools_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LRSwiftyTools_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DB7257FCDE2250D50417E13C000E8F60 /* LRUICollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUICollectionView.swift; path = LRSwiftyTools/Classes/LRUICollectionView.swift; sourceTree = "<group>"; };
-		DD0044536B043366C2F6F1093FF8CFFD /* LRSwiftyTools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LRSwiftyTools-umbrella.h"; sourceTree = "<group>"; };
-		E4576F0DBD7D4F80D1D9E404D36CDAB9 /* LRString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRString.swift; path = LRSwiftyTools/Classes/LRString.swift; sourceTree = "<group>"; };
-		E7B7ECA5FD765E44855CB6535ED85CF8 /* LRDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRDate.swift; path = LRSwiftyTools/Classes/LRDate.swift; sourceTree = "<group>"; };
-		F61C79E9EE73E799B00B667C0EE6457F /* LRPingFangFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRPingFangFont.swift; path = LRSwiftyTools/Classes/LRPingFangFont.swift; sourceTree = "<group>"; };
+		D8DE3BCA09DB32E7A52D651F3D06D4BD /* LRView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRView.swift; path = LRSwiftyTools/Classes/LRView.swift; sourceTree = "<group>"; };
+		D979351A9E6A00AA6D0E3F4F5E13B119 /* LRSwiftyTools-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LRSwiftyTools-Info.plist"; sourceTree = "<group>"; };
+		E0FF3C86F7A24A96C1B96BC193724BE0 /* LRSwiftyTools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LRSwiftyTools.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E4CC1E789C005DF0389D8320E7667FB6 /* LRDouble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRDouble.swift; path = LRSwiftyTools/Classes/LRDouble.swift; sourceTree = "<group>"; };
+		E79CD3CD402C7A203A160E47B27EF651 /* LRSwiftyTools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LRSwiftyTools.modulemap; sourceTree = "<group>"; };
+		E7A31B0AA2505B04E453FF2530108F1E /* LRUICollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUICollectionView.swift; path = LRSwiftyTools/Classes/LRUICollectionView.swift; sourceTree = "<group>"; };
+		EC211E70B1EDDF43CF8805B1FAB16875 /* LRGCDHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRGCDHelper.swift; path = LRSwiftyTools/Classes/LRGCDHelper.swift; sourceTree = "<group>"; };
+		ED309DC0A4F867CBDDB9453E0D22C048 /* LRController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRController.swift; path = LRSwiftyTools/Classes/LRController.swift; sourceTree = "<group>"; };
+		F52DA41B6D75F5F25402DB3BA4BFA695 /* LRSwiftyTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LRSwiftyTools.debug.xcconfig; sourceTree = "<group>"; };
 		F7100FA3CB7361F404AD0A11AADE55D3 /* Pods-LRSwiftyTools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LRSwiftyTools_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F78B951B650B4EFB88A6487E9F543B30 /* Pods-LRSwiftyTools_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LRSwiftyTools_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FA01F54A90F9ED318CE0C81F33F4C995 /* LRData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRData.swift; path = LRSwiftyTools/Classes/LRData.swift; sourceTree = "<group>"; };
+		FBA33CD26A489F5402B77E622566FDE6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		FBB8BA8C697DFDE76972C6CDA3314E0E /* LRLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRLabel.swift; path = LRSwiftyTools/Classes/LRLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,11 +159,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		483B28A020AAAE2442F783DAC4822D0F /* Frameworks */ = {
+		D6525F5756FC524A27E96F73937CCBE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25967C881874CA6CAC7E0A88C3A22738 /* Foundation.framework in Frameworks */,
+				B5D73E998367D00E4E8BA08ACB28CED8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,51 +185,6 @@
 			);
 			name = "Pods-LRSwiftyTools_Example";
 			path = "Target Support Files/Pods-LRSwiftyTools_Example";
-			sourceTree = "<group>";
-		};
-		1D517E014D69A894CB42AECC96685031 /* LRSwiftyTools */ = {
-			isa = PBXGroup;
-			children = (
-				3BD6C6735E55C62EA2238C08875BD36B /* LRArray.swift */,
-				0FF242F505A9C1CABDCE7DC4AA2EC404 /* LRAudioPlayer.swift */,
-				55A96A4E8E2AC894E34EB680577225F3 /* LRAutoScrollLabel.swift */,
-				82CA10B524484DE97F62688E9B7E8A1E /* LRBaseTabBarController.swift */,
-				9ED3A65D9F3657099838ABE08F378362 /* LRButton.swift */,
-				2A3F88D83D9F6E97292A4AE0D3C13A44 /* LRCollectionColorFlowLayout.swift */,
-				90E8E46114D60F992D086C5EDEC66DBF /* LRColor.swift */,
-				58B36886ABDBC64A5BD93A6F194FAA2D /* LRController.swift */,
-				AB9024C4E55A8928297F89C30CDC58E4 /* LRCountDown.swift */,
-				39325E16F9BABAC94865F57CA224C7B1 /* LRData.swift */,
-				E7B7ECA5FD765E44855CB6535ED85CF8 /* LRDate.swift */,
-				D6D7CED1A035A44B9F2345A04E0D396D /* LRDLog.swift */,
-				79CE971F722BA9ECA76BA1E69D9B365D /* LRDouble.swift */,
-				70EE47D26A54F21BE211D8C341C561E8 /* LRGCDHelper.swift */,
-				57D3561C232923F6F2E679D9894A9A45 /* LRGradientBorderView.swift */,
-				6943B689A569948934C99F1395A08F1A /* LRHoleView.swift */,
-				A71A35AB76B9FE8CBA508A631383B2DB /* LRImage.swift */,
-				2A69F6AE9CB6CDD4BB5EFED12D920B57 /* LRLabel.swift */,
-				C1F5A10BC7B46103B0F89DDEB77414E6 /* LRPHAsset.swift */,
-				F61C79E9EE73E799B00B667C0EE6457F /* LRPingFangFont.swift */,
-				D2145EE0B15F5ADACAA48807AA5324C8 /* LRRAirSandBox.swift */,
-				07C77091E2EE320984BB76BBB4BB5F40 /* LRRegex.swift */,
-				A9EB7A8270FA8F55C563E9847B7F8D59 /* LRReuseable.swift */,
-				0F2BC74ECE0DD86B017B54D022DB1819 /* LRSafeArray.swift */,
-				E4576F0DBD7D4F80D1D9E404D36CDAB9 /* LRString.swift */,
-				B57C4BB1B89B50981E2AD93681AFB966 /* LRSwiftyTools.swift */,
-				67FD236041B63DD2A894A30350FFE73E /* LRTextView.swift */,
-				8A821D4618F4A281492D021B28EDB554 /* LRTimer.swift */,
-				DB7257FCDE2250D50417E13C000E8F60 /* LRUICollectionView.swift */,
-				9EA785198BE3774D982C69EFD96ED007 /* LRUIStoryboard.swift */,
-				6BB99B222FC4D15660521F965EF49BC4 /* LRUITableView.swift */,
-				633603FD84DA37FB2D95EBE5BBD4C6BA /* LRUnselectableTappableTextView.swift */,
-				4012419FDBA8DAC161CF513C85600206 /* LRURL.swift */,
-				BAF65C79C6A5995F8A42F29EBE51DF7B /* LRView.swift */,
-				5BC05633AAB8364C1892DD08D2AEF33F /* LRWeakSet.swift */,
-				E2963DD80D3ED7B04A1749F35E4AC7BC /* Pod */,
-				7D33EFE016CB044AA578C9590B627E31 /* Support Files */,
-			);
-			name = LRSwiftyTools;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -257,25 +214,81 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7D33EFE016CB044AA578C9590B627E31 /* Support Files */ = {
+		9C657D02A1E206F4BF6C47CA3A2709A2 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				81038536DAD4F641A5AF3357625E53F3 /* LRSwiftyTools.modulemap */,
-				8A5C34378E0702D869D7C5A2AE84B971 /* LRSwiftyTools-dummy.m */,
-				0CCE7FAC1B22630889B3C39ACDA6B9FB /* LRSwiftyTools-Info.plist */,
-				D0BA4335C2F0858A4973EA222360E99A /* LRSwiftyTools-prefix.pch */,
-				DD0044536B043366C2F6F1093FF8CFFD /* LRSwiftyTools-umbrella.h */,
-				4AD879054B126DAC5FA83A2DC736A61E /* LRSwiftyTools.debug.xcconfig */,
-				2BA483A61D265C46A866DF52518C8CD5 /* LRSwiftyTools.release.xcconfig */,
+				4BE2156A71D4DDEF5992FD674C67FB3B /* LICENSE */,
+				E0FF3C86F7A24A96C1B96BC193724BE0 /* LRSwiftyTools.podspec */,
+				FBA33CD26A489F5402B77E622566FDE6 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		C0875F5C0A6D1B75780DB8BE5C5CB0FE /* LRSwiftyTools */ = {
+			isa = PBXGroup;
+			children = (
+				5A88BCB07ADDAFB578765B5064889501 /* LRArray.swift */,
+				2607C1D5ED9D38D923CEF5326D614629 /* LRAudioPlayer.swift */,
+				99297724D802DB02E80915A935493D12 /* LRAutoScrollLabel.swift */,
+				B5AC786082405FCBFF4B261D3B5FFCEE /* LRBaseTabBarController.swift */,
+				7A054BBF61FA854E7AAEB129BB4D0E7E /* LRCollectionColorFlowLayout.swift */,
+				54150E70EE70D472DF23A1C2347594CD /* LRColor.swift */,
+				ED309DC0A4F867CBDDB9453E0D22C048 /* LRController.swift */,
+				5226C3E8FE3A4CEFEF88101A68E6392E /* LRCountDown.swift */,
+				FA01F54A90F9ED318CE0C81F33F4C995 /* LRData.swift */,
+				2C26699C30B97354073BE5F22ED2A87A /* LRDate.swift */,
+				D4D5CB4FC82424CC4BB6D72DFE53EAE8 /* LRDLog.swift */,
+				E4CC1E789C005DF0389D8320E7667FB6 /* LRDouble.swift */,
+				EC211E70B1EDDF43CF8805B1FAB16875 /* LRGCDHelper.swift */,
+				CE11E10C05034F3A21A912C2488B3937 /* LRGradientBorderView.swift */,
+				4F12EB5EAA76B35A474175E3FECFB103 /* LRGradientButton.swift */,
+				7E245A489B55F346BEB512B3C7B1740C /* LRHoleView.swift */,
+				0C1362A32F45078D3368FE2C3956EB3E /* LRImage.swift */,
+				FBB8BA8C697DFDE76972C6CDA3314E0E /* LRLabel.swift */,
+				D0415B1030B762DE935A8D7BD356FFBC /* LRPHAsset.swift */,
+				59E4DA211F5D6CC98B17BB4A53C86B07 /* LRPingFangFont.swift */,
+				8FECC9F7FAA78D1F0DE281F8423FD7D2 /* LRRAirSandBox.swift */,
+				2BB3E5F223D0F906974B4F4175C72657 /* LRRegex.swift */,
+				4505E8CB3E2E5E984D80BB4350C1A535 /* LRReuseable.swift */,
+				930AD66FB01209D7AD7FEF12968C6A2C /* LRSafeArray.swift */,
+				992EE1FA5EECC2BC65B611FD8A1E2092 /* LRString.swift */,
+				2A25FA2D17E5C457946C53F68D81955E /* LRSwiftyTools.swift */,
+				AD9DCED00AC03BA6463A0D61CCCBA4BD /* LRTextView.swift */,
+				0E1022554329ED27C151937C370C4942 /* LRTimer.swift */,
+				E7A31B0AA2505B04E453FF2530108F1E /* LRUICollectionView.swift */,
+				3239B62F0B1A5B2838543917D25C66B9 /* LRUILayoutButton.swift */,
+				9DE59C86710ACF5907BBD49B6EB9B2DF /* LRUIStoryboard.swift */,
+				06FA5D891A26F778C47867448997F731 /* LRUITableView.swift */,
+				85454377D1E99BFB42CF1AA809CFE802 /* LRUnselectableTappableTextView.swift */,
+				BD0E8983E5456BC04F680B0B8E71C163 /* LRURL.swift */,
+				D8DE3BCA09DB32E7A52D651F3D06D4BD /* LRView.swift */,
+				55B54327042DE2759E56F0EE8A97D212 /* LRWeakSet.swift */,
+				9C657D02A1E206F4BF6C47CA3A2709A2 /* Pod */,
+				C436DF865C85BB394CDC1C2CA9105A7A /* Support Files */,
+			);
+			name = LRSwiftyTools;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C436DF865C85BB394CDC1C2CA9105A7A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E79CD3CD402C7A203A160E47B27EF651 /* LRSwiftyTools.modulemap */,
+				CE15D8ACEEC106C5ECFE7E0BD95A8028 /* LRSwiftyTools-dummy.m */,
+				D979351A9E6A00AA6D0E3F4F5E13B119 /* LRSwiftyTools-Info.plist */,
+				80BCF23AD8B79377D0DECA59429B625D /* LRSwiftyTools-prefix.pch */,
+				BE732D46950B869BC384B32CD08FCBE4 /* LRSwiftyTools-umbrella.h */,
+				F52DA41B6D75F5F25402DB3BA4BFA695 /* LRSwiftyTools.debug.xcconfig */,
+				20206B56D60D7ED24058C37F8FB513EA /* LRSwiftyTools.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/LRSwiftyTools";
 			sourceTree = "<group>";
 		};
-		80BC82B45FD8ECB6973FF2685F941993 /* Development Pods */ = {
+		C505530B6DEA626AB0CB2F64AB674FC5 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1D517E014D69A894CB42AECC96685031 /* LRSwiftyTools */,
+				C0875F5C0A6D1B75780DB8BE5C5CB0FE /* LRSwiftyTools */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -284,7 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				80BC82B45FD8ECB6973FF2685F941993 /* Development Pods */,
+				C505530B6DEA626AB0CB2F64AB674FC5 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				6C079202090D57AE369FD6238121C288 /* Products */,
 				74370ECC4ACAE17CD69D4F5D5D17E22F /* Targets Support Files */,
@@ -315,19 +328,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E2963DD80D3ED7B04A1749F35E4AC7BC /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2A0B74A5064A4363A03BA5807BE669D0 /* LICENSE */,
-				ADE42B4492D8E5F6A8E84E0C7A8BC96A /* LRSwiftyTools.podspec */,
-				5E7206BC8C608E10C84C391169624160 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2A072FF1E4F6271387DAE9F8B55AD849 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466CCD309CF33BDAD763E7A5B9AF6766 /* LRSwiftyTools-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F758837586BC22825B2720DBFA3B739 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,14 +352,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1504BD2C39A6455D467AFDC389DABE8A /* Pods-LRSwiftyTools_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D12390B4AA6127247ADA07B9599472CF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9EDDD80E89F5DDF0BB036EA4B3223C1 /* LRSwiftyTools-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +370,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				077685E6E2D515122880B6198092744F /* PBXTargetDependency */,
+				CF82E219D42911FD3B8D0149C62DA264 /* PBXTargetDependency */,
 			);
 			name = "Pods-LRSwiftyTools_Example";
 			productName = Pods_LRSwiftyTools_Example;
@@ -386,7 +389,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				34A17CE255E87B7203E0127275FA26F3 /* PBXTargetDependency */,
+				E89BB2071B927FCA69B332C9151E8812 /* PBXTargetDependency */,
 			);
 			name = "Pods-LRSwiftyTools_Tests";
 			productName = Pods_LRSwiftyTools_Tests;
@@ -395,12 +398,12 @@
 		};
 		B648DAA2A838DFBA06A577720D4C7A0D /* LRSwiftyTools */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B75F27C6ABDA68313CAAC9A9CBD3E7E1 /* Build configuration list for PBXNativeTarget "LRSwiftyTools" */;
+			buildConfigurationList = 9628F5BBE8252F574110B4F4838371A4 /* Build configuration list for PBXNativeTarget "LRSwiftyTools" */;
 			buildPhases = (
-				D12390B4AA6127247ADA07B9599472CF /* Headers */,
-				4EF85E95C4FAA4B5CE19C4FB3A95E9BF /* Sources */,
-				483B28A020AAAE2442F783DAC4822D0F /* Frameworks */,
-				4CB0EBEE55767EF1D12F45F7B19EA013 /* Resources */,
+				2A072FF1E4F6271387DAE9F8B55AD849 /* Headers */,
+				6028DD8E19523A7D2B976B35BFE9251C /* Sources */,
+				D6525F5756FC524A27E96F73937CCBE8 /* Frameworks */,
+				F64A6DA5EB278E2A85C80E34D1639B73 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -441,13 +444,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4CB0EBEE55767EF1D12F45F7B19EA013 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D42A35DBAD88EDD3EF7F4E33BB073F22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,6 +452,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D668E0812CDB71754800F75FE4652445 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F64A6DA5EB278E2A85C80E34D1639B73 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -473,46 +476,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EF85E95C4FAA4B5CE19C4FB3A95E9BF /* Sources */ = {
+		6028DD8E19523A7D2B976B35BFE9251C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DD8CD7BA5AB7EDBF4FC170EAA47450 /* LRArray.swift in Sources */,
-				91165A1DD1B5FAB27E5F3DD91BED00A1 /* LRAudioPlayer.swift in Sources */,
-				AEC06788F8C944275AEAE616E5A7EF74 /* LRAutoScrollLabel.swift in Sources */,
-				0118305BF4413218D8FD0927388197E8 /* LRBaseTabBarController.swift in Sources */,
-				2946525426D9D2FF9E5659DD11A094E4 /* LRButton.swift in Sources */,
-				F4340D0AAFC8818A1102B8DA20652B87 /* LRCollectionColorFlowLayout.swift in Sources */,
-				5F4AAAB0F425F0A884029C54654EA036 /* LRColor.swift in Sources */,
-				EC242CAB5E8C4B25062936D419F6EB57 /* LRController.swift in Sources */,
-				5139B50F86E29A5829B703FCEECCFBCF /* LRCountDown.swift in Sources */,
-				014207EFC7A5768AA0FE82071622164B /* LRData.swift in Sources */,
-				4524786488FDE32A224161C1579E6ACB /* LRDate.swift in Sources */,
-				F4E73A5570DEB6D8A5BA9EFADD506E96 /* LRDLog.swift in Sources */,
-				A97CD2C1C3CDE5AB92BBBFCC726A09E9 /* LRDouble.swift in Sources */,
-				5A5356729F44B1EC857F16E2210114C2 /* LRGCDHelper.swift in Sources */,
-				C6304A184AB2072FCBEB3E8E427DC0BF /* LRGradientBorderView.swift in Sources */,
-				C09A86BEBA39F23C5792F4F9F15FEF40 /* LRHoleView.swift in Sources */,
-				AE4400210D08C6F535E3462519E8F108 /* LRImage.swift in Sources */,
-				519465A560591FCB137467203FD3CBEF /* LRLabel.swift in Sources */,
-				BF5EE9D7889EF590AB513F61AFD72444 /* LRPHAsset.swift in Sources */,
-				7339B4B88E2816496D9A78EC6D0DBBE2 /* LRPingFangFont.swift in Sources */,
-				321D01C034023A7C2DFDF48A512CB04F /* LRRAirSandBox.swift in Sources */,
-				3D4D75846A734914701611D049117B9C /* LRRegex.swift in Sources */,
-				08254DDB801A0F43D614CF92AD95BB36 /* LRReuseable.swift in Sources */,
-				BA69C7E866CF4A78CB2F58BCB882EBE0 /* LRSafeArray.swift in Sources */,
-				EFD998614714C208B2DCD90AD333E6DA /* LRString.swift in Sources */,
-				BA3BDC3BB5C439BF26B3608363714515 /* LRSwiftyTools.swift in Sources */,
-				EF07F71E55EADD99CF7BF4ED80067648 /* LRSwiftyTools-dummy.m in Sources */,
-				6DC838D3DA6B064F1D228A72F8A8868C /* LRTextView.swift in Sources */,
-				40DED5F510200B3CC55F274052EBCE48 /* LRTimer.swift in Sources */,
-				6D0082B4614F7A6652718B699EA34F9A /* LRUICollectionView.swift in Sources */,
-				6E0E0D144A1C73FA8A5C16B99167D9DF /* LRUIStoryboard.swift in Sources */,
-				16DCC44CC814D6FC9D2841D7895E01FF /* LRUITableView.swift in Sources */,
-				0B05CE0113E699F2610910B7F5DB2870 /* LRUnselectableTappableTextView.swift in Sources */,
-				957E6D6258AB546749C078DAED1B6D2A /* LRURL.swift in Sources */,
-				96C5D126B85DE44460B1C96F746760C2 /* LRView.swift in Sources */,
-				524C60698B3869460932A6F8A03439DC /* LRWeakSet.swift in Sources */,
+				9CAF86E7D535CE55CDED01E19A0958B5 /* LRArray.swift in Sources */,
+				B178C4D047EB5726601CC752003415FE /* LRAudioPlayer.swift in Sources */,
+				0D82B70D8B5EB97BCAF885642B858F22 /* LRAutoScrollLabel.swift in Sources */,
+				AF4F8E7AF416E7FD09999DD7CB86DC4B /* LRBaseTabBarController.swift in Sources */,
+				D9B8F3A88486290DA330E716944D4FAD /* LRCollectionColorFlowLayout.swift in Sources */,
+				4B5937F42452D43353DE35027282F635 /* LRColor.swift in Sources */,
+				365A152D1B61C8696F223E0945299083 /* LRController.swift in Sources */,
+				13FCFDF19AD15C740FA7B91B14DFE6C8 /* LRCountDown.swift in Sources */,
+				9A839EEF822BDB585543DEA5DDC50C7E /* LRData.swift in Sources */,
+				EC8ED59D0C6B9708B0C6396A6E0C7048 /* LRDate.swift in Sources */,
+				B2173E09DD80D52A3B652D357CA70F9A /* LRDLog.swift in Sources */,
+				3E95B0A7458E2EFFDE9662F9FBB253D5 /* LRDouble.swift in Sources */,
+				8BD3DDDB050E2522C328D5497D905A56 /* LRGCDHelper.swift in Sources */,
+				C01EBD2E69EF01CC773430873A904D47 /* LRGradientBorderView.swift in Sources */,
+				34ABE426F3EF7E06A409691264E1E0E8 /* LRGradientButton.swift in Sources */,
+				8623007F4ADB92ECF3E33EC0BE1C50EA /* LRHoleView.swift in Sources */,
+				813CFE62B6EB41868A18537734188AA7 /* LRImage.swift in Sources */,
+				FCAFE1E9EA66E6DB3FFFF70D0AA4DD7A /* LRLabel.swift in Sources */,
+				6F181FB3A427BAE46CAA9115A64FEEDD /* LRPHAsset.swift in Sources */,
+				D92D25D1CF35FAA7A12009FCB4EBEFC4 /* LRPingFangFont.swift in Sources */,
+				1C6C64D44096F825E5D66B122F7299FF /* LRRAirSandBox.swift in Sources */,
+				0DF17EA399ADBA8074F112FAB7B84C15 /* LRRegex.swift in Sources */,
+				29AA340D8E6A5B8BA397670CD1349B2E /* LRReuseable.swift in Sources */,
+				DAC733C6E2314D224D3EA5453FF0398F /* LRSafeArray.swift in Sources */,
+				31DBA1C1E2C03038E7DC641D5F0702AB /* LRString.swift in Sources */,
+				FC715FDB6B65C02894D08BFC805505C2 /* LRSwiftyTools.swift in Sources */,
+				75C93BD1609538E78918678533C356B4 /* LRSwiftyTools-dummy.m in Sources */,
+				42D87FAB09A1E429355E13777227F029 /* LRTextView.swift in Sources */,
+				E3171104F7A8669528A82CBE2AE2802F /* LRTimer.swift in Sources */,
+				F136F0ECEC9B28929401A91FA98F40D7 /* LRUICollectionView.swift in Sources */,
+				36C21967D87D53422AB9183E2DCEDAFA /* LRUILayoutButton.swift in Sources */,
+				E1164F1B86630DA4B04BA04E611BBE52 /* LRUIStoryboard.swift in Sources */,
+				E88CCA392DA17C0AE5CCF7B1835D546A /* LRUITableView.swift in Sources */,
+				A56A96D4E062DE28C9C2898E65F3173A /* LRUnselectableTappableTextView.swift in Sources */,
+				DE2D04533D283507ADAEE3B3E96C5551 /* LRURL.swift in Sources */,
+				2B1E7FF17E3504C3407EF97DB00E148C /* LRView.swift in Sources */,
+				F422F23221833F0D0EF903CF601DF481 /* LRWeakSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,17 +531,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		077685E6E2D515122880B6198092744F /* PBXTargetDependency */ = {
+		CF82E219D42911FD3B8D0149C62DA264 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LRSwiftyTools;
 			target = B648DAA2A838DFBA06A577720D4C7A0D /* LRSwiftyTools */;
-			targetProxy = 11F38AF545968D2214998F9B1CAB980B /* PBXContainerItemProxy */;
+			targetProxy = E5AF4125E22700964EB9B15ABE481F7E /* PBXContainerItemProxy */;
 		};
-		34A17CE255E87B7203E0127275FA26F3 /* PBXTargetDependency */ = {
+		E89BB2071B927FCA69B332C9151E8812 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-LRSwiftyTools_Example";
 			target = 9A5D5CD387F78BC10230BAE7FA7C6B49 /* Pods-LRSwiftyTools_Example */;
-			targetProxy = B4E878F0E12473C7CAD075A7FE060DBB /* PBXContainerItemProxy */;
+			targetProxy = 1005A0E133B8465BC5CDA7A4C6598AAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -774,9 +778,9 @@
 			};
 			name = Release;
 		};
-		945AB4C0CAEC70FAE6D85340B6034866 /* Debug */ = {
+		7EC2756F45FC2B0AE4442978A74EBF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AD879054B126DAC5FA83A2DC736A61E /* LRSwiftyTools.debug.xcconfig */;
+			baseConfigurationReference = F52DA41B6D75F5F25402DB3BA4BFA695 /* LRSwiftyTools.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -806,9 +810,9 @@
 			};
 			name = Debug;
 		};
-		A5BE326E95908881E8C8A05C3A01CE17 /* Release */ = {
+		C908735E301DF9598427213FEFD0D393 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BA483A61D265C46A866DF52518C8CD5 /* LRSwiftyTools.release.xcconfig */;
+			baseConfigurationReference = 20206B56D60D7ED24058C37F8FB513EA /* LRSwiftyTools.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -903,11 +907,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B75F27C6ABDA68313CAAC9A9CBD3E7E1 /* Build configuration list for PBXNativeTarget "LRSwiftyTools" */ = {
+		9628F5BBE8252F574110B4F4838371A4 /* Build configuration list for PBXNativeTarget "LRSwiftyTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				945AB4C0CAEC70FAE6D85340B6034866 /* Debug */,
-				A5BE326E95908881E8C8A05C3A01CE17 /* Release */,
+				7EC2756F45FC2B0AE4442978A74EBF27 /* Debug */,
+				C908735E301DF9598427213FEFD0D393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,47 +1,21 @@
 import Foundation
 import UIKit
-@objcMembers
-open class UILayoutButton: UIButton {
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        self.resetLayoutStyle()
-    }
-}
-@objc public enum UIButtonLayoutStyle: Int {
+@objc public enum  UILayoutButtonStyle: Int {
     case leftImageRightTitle = 0
     case leftTitleRightImage
     case upImageDownTitle
     case upTitleDownImage
 }
-@objc extension UIButton {
-    private struct _AssociatedKeys {
-        static var spacingKey = "spacingKey"
-        static var styleKey = "styleKey"
+@objcMembers
+open class UILayoutButton: UIButton {
+    @objc @IBInspectable public var spacing: CGFloat = 2
+    @objc public var layoutStyle:  UILayoutButtonStyle = .leftImageRightTitle
+    @objc @IBInspectable var layoutStyleNumber: Int = 0
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        self.resetLayoutStyle()
     }
-    @objc @IBInspectable public var spacing: CGFloat {
-        get {
-            return objc_getAssociatedObject(self, &_AssociatedKeys.spacingKey) as? CGFloat ?? 2
-        }
-        set {
-            objc_setAssociatedObject(self, &_AssociatedKeys.spacingKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-    public var layoutStyle: UIButtonLayoutStyle {
-        get {
-            return objc_getAssociatedObject(self, &_AssociatedKeys.styleKey) as? UIButtonLayoutStyle ?? .leftImageRightTitle
-        }
-        set {
-            objc_setAssociatedObject(self, &_AssociatedKeys.styleKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC )
-        }
-    }
-    @objc @IBInspectable var layoutStyleNumber: Int {
-        set {
-            self.layoutStyle = UIButtonLayoutStyle(rawValue: newValue) ?? .leftImageRightTitle
-        }
-        get {
-            return self.layoutStyle.rawValue
-        }
-    }
+    
     public func resetLayoutStyle() {
         guard let image = self.imageView, let title = self.titleLabel else { return }
         image.sizeToFit()
