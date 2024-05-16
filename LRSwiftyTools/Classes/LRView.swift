@@ -48,4 +48,12 @@ import UIKit
             subview.removeFromSuperview()
         }
     }
+    @objc func snapImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
+        guard let c = UIGraphicsGetCurrentContext() else { return nil }
+        self.layer.render(in: c)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 }
