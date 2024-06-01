@@ -100,7 +100,7 @@ public extension String {
 }
 public extension String {
     func nsRange(of string: String) -> NSRange {
-        guard let range = self.range(of: string) else { return NSRange(location: 0, length: 0) }
+        guard let range = self.range(of: string) else { return NSRange(location: NSNotFound, length: 0) }
         return NSRange(range, in: self)
     }
 }
