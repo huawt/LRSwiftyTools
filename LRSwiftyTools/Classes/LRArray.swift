@@ -22,6 +22,7 @@ public extension Array where Element: Any {
     }
 }
 public extension Array {
+    @discardableResult
     mutating func removeFirst(_ k: Int) -> Self {
         if self.count < k {
             let array = self

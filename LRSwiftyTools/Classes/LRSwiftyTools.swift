@@ -39,3 +39,30 @@ open class LRSwiftyTools: NSObject {
         }
     }
 }
+
+@propertyWrapper
+public struct LrSaved<T> {
+    private let key: String
+    private let defaultValue: T
+    private let defaults = UserDefaults.standard
+    public init(key: String, defaultValue: T) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+    public var wrappedValue: T {
+        get {
+            return (defaults.object(forKey: key) as? T) ?? defaultValue
+        }
+        set {
+            switch newValue as Any {
+            case Optional<Any>.some(let value):
+                defaults.set(value, forKey: key)
+            case Optional<Any>.none:
+                defaults.removeObject(forKey: key)
+            default:
+                defaults.set(newValue, forKey: key)
+            }
+            defaults.synchronize()
+        }
+    }
+}

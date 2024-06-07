@@ -1,12 +1,5 @@
 import UIKit
 @objc public extension UIView {
-    @objc func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
-        let size = CGSize(width: radius, height: radius)
-        let maskPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: size)
-        let shape = CAShapeLayer()
-        shape.path = maskPath.cgPath
-        layer.mask = shape
-    }
     @objc @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
