@@ -59,9 +59,6 @@ public extension String {
 		return regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count))
 	}
     func match(pattern: String, options: NSRegularExpression.Options = []) -> Bool {
-        guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
-            return false
-        }
         let results = self.matches(pattern: pattern, options: options)
         for result in results {
             if result.range.location != NSNotFound {

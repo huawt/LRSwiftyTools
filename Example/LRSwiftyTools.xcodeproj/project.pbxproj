@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9542999AC2B69694AC57CEF3 /* Pods_LRSwiftyTools_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06604338C3FF0F4425E92DC0 /* Pods_LRSwiftyTools_Example.framework */; };
+		BFEC716B2C194FE700A88C95 /* DispatchExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEC716A2C194FE700A88C95 /* DispatchExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		84FDCFB4EBE80F18D62A333B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		98D8712AE2FB5F0910F6939F /* Pods-LRSwiftyTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRSwiftyTools_Example.debug.xcconfig"; path = "Target Support Files/Pods-LRSwiftyTools_Example/Pods-LRSwiftyTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BEEFEC091357F7176778CE48 /* Pods-LRSwiftyTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRSwiftyTools_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LRSwiftyTools_Tests/Pods-LRSwiftyTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFEC716A2C194FE700A88C95 /* DispatchExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				BFEC716A2C194FE700A88C95 /* DispatchExample.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEC716B2C194FE700A88C95 /* DispatchExample.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

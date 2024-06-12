@@ -27,11 +27,11 @@ public extension CGRect {
 		let newWidth = self.width * scale
 		let newHeight = self.height * scale
 		if holdCenter {
-			return CGRect(x: self.origin.x, y: self.origin.y, width: newWidth, height: newHeight)
-		} else {
-			let newX = self.origin.x + (self.width - newWidth) / 2.0
-			let newY = self.origin.y + (self.height - newHeight) / 2.0
-			return CGRect(x: newX, y: newY, width: newWidth, height: newHeight)
+            let newX = self.origin.x + (self.width - newWidth) / 2.0
+            let newY = self.origin.y + (self.height - newHeight) / 2.0
+            return CGRect(x: newX, y: newY, width: newWidth, height: newHeight)
+        } else {
+            return CGRect(x: self.origin.x, y: self.origin.y, width: newWidth, height: newHeight)
 		}
 	}
 }

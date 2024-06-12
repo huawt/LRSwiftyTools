@@ -1,65 +1,65 @@
 import Foundation
-public class WeakSet<T: AnyObject>: Sequence, ExpressibleByArrayLiteral, CustomStringConvertible, CustomDebugStringConvertible {
+class WeakSet<T: AnyObject>: Sequence, ExpressibleByArrayLiteral, CustomStringConvertible, CustomDebugStringConvertible {
 	private var objects = NSHashTable<T>.weakObjects()
-	public init(_ objects: [T]) {
+    init(_ objects: [T]) {
 		for object in objects {
 			insert(object)
 		}
 	}
-	public required convenience init(arrayLiteral elements: T...) {
+    required convenience init(arrayLiteral elements: T...) {
 		self.init(elements)
 	}
-	public var allObjects: [T] {
+    var allObjects: [T] {
 		return objects.allObjects
 	}
-	public var count: Int {
+    var count: Int {
 		return objects.count
 	}
-	public var isEmpty: Bool {
+    var isEmpty: Bool {
 		return objects.count == 0
 	}
-	public func contains(_ object: T) -> Bool {
+    func contains(_ object: T) -> Bool {
 		return objects.contains(object)
 	}
-	public func add(_ object: T) {
+    func add(_ object: T) {
 		objects.add(object)
 	}
-	public func append(_ object: T) {
+    func append(_ object: T) {
 		objects.add(object)
 	}
-	public func insert(_ object: T) {
+    func insert(_ object: T) {
 		objects.add(object)
 	}
-	public func delete(_ object: T) {
+    func delete(_ object: T) {
 		objects.remove(object)
 	}
-	public func remove(_ object: T) {
+    func remove(_ object: T) {
 		objects.remove(object)
 	}
-	public func clear() {
+    func clear() {
 		objects.removeAllObjects()
 	}
-	public func removeAll() {
+    func removeAll() {
 		objects.removeAllObjects()
 	}
-	public func makeIterator() -> AnyIterator<T> {
+    func makeIterator() -> AnyIterator<T> {
 		let iterator = objects.objectEnumerator()
 		return AnyIterator {
 			iterator.nextObject() as? T
 		}
 	}
-	public var description: String {
+    var description: String {
 		return objects.description
 	}
-	public var debugDescription: String {
+    var debugDescription: String {
 		return objects.debugDescription
 	}
 }
 public protocol DispatchPool {
 	associatedtype Observer: NSObjectProtocol
-	func add(observer: Observer)
-	func del(observer: Observer)
-	func dispatch(selector: Selector, object1: Any?, object2: Any?)
+    func add(observer: Observer)
+    func del(observer: Observer)
+    func dispatch(selector: Selector, object1: Any?, object2: Any?)
 }
 open class Dispatcher<P: NSObjectProtocol>: NSObject, DispatchPool {
 	fileprivate let mutex = NSLock()
@@ -99,7 +99,7 @@ open class Dispatcher<P: NSObjectProtocol>: NSObject, DispatchPool {
 }
 public protocol Dispatchable: DispatchPool {
 	associatedtype Ablity: NSObjectProtocol
-	var dispatcher: Dispatcher<Ablity> { get }
+    var dispatcher: Dispatcher<Ablity> { get }
 }
 extension Dispatchable {
 	public func add(observer: Self.Ablity) {

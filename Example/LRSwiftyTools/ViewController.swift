@@ -8,8 +8,9 @@
 
 import UIKit
 import LRSwiftyTools
+import Photos
 
-class ViewController: UIViewController, UITextViewDelegate {
+class ViewController: UIViewController, UITextViewDelegate, DispatchExampleProtocol {
 
     @LrSaved(key: "ViewController", defaultValue: true)
     var displayed: Bool
@@ -26,6 +27,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         lable.text = "Do any additional setup after loading the view, typically from a nib.Do any additional setup after loading the view, typically from a nib.Do any additional setup after loading the view, typically from a nib.Do any additional setup after loading the view, typically from a nib."
         lable.numberOfLines = 0;
         lable.lineSpace = 10;
+        lable.font = UIFont.pingfangLight(13)
         self.view.addSubview(lable)
         
         let tv = LRUnselectableTappableTextView(frame: CGRect(x: 100, y: 400, width: 200, height: 200))
@@ -40,6 +42,18 @@ class ViewController: UIViewController, UITextViewDelegate {
             print(text)
         }
         self.view.addSubview(tv)
+        
+        
+        DispatchExample.example.add(observer: self)
+        DispatchExample.example.add(observer: self)
+//        DispatchExample.example.del(observer: self)
+        
+    }
+    func example() {
+        print("DispatchExample - example")
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        DispatchExample.example.test()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
