@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
 private struct RAirSandBoxConstant {
-    static let kASThemeColor = UIColor(white: 0.2, alpha: 1.0)
-    static let kASWindowPadding: CGFloat = 20
+    static let kRASThemeColor = UIColor(white: 0.2, alpha: 1.0)
+    static let kRASWindowPadding: CGFloat = 20
     static var cellWidth: CGFloat {
-        return UIScreen.main.bounds.width - (2 * self.kASWindowPadding)
+        return UIScreen.main.bounds.width - (2 * self.kRASWindowPadding)
     }
 }
 private enum RSFileItemType {
@@ -34,7 +34,7 @@ private class RAirSandboxCell: UITableViewCell {
     }()
     lazy var line: UIView = {
         let line = UIView()
-        line.backgroundColor = RAirSandBoxConstant.kASThemeColor
+        line.backgroundColor = RAirSandBoxConstant.kRASThemeColor
         line.frame = CGRect(x: 10, y: 47, width: RAirSandBoxConstant.cellWidth - 20, height: 1)
         return line
     }()
@@ -64,7 +64,7 @@ private class RSViewController: UIViewController {
     }()
     lazy var closeButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = RAirSandBoxConstant.kASThemeColor
+        button.backgroundColor = RAirSandBoxConstant.kRASThemeColor
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Close", for: .normal)
         button.addTarget(self, action: #selector(closeButtonClick), for: .touchUpInside)
@@ -129,8 +129,9 @@ private class RSViewController: UIViewController {
     }
     private func share(file path: String) {
         let url = URL(fileURLWithPath: path)
+        let d = RSDeleteActivity()
         let shareController = UIActivityViewController(activityItems: [url],
-                                                       applicationActivities: nil)
+                                                       applicationActivities: [d])
         shareController.excludedActivityTypes = [
             .postToWeibo,
             .message,
@@ -144,6 +145,11 @@ private class RSViewController: UIViewController {
             .assignToContact,
             .addToReadingList
         ]
+        shareController.completionWithItemsHandler = { [weak self] (a, b, _, _) in
+            if a?.rawValue == d.activityTitle, b == true {
+                self?.loadFiles(path: (path as NSString).deletingLastPathComponent)
+            }
+        }
         if UIDevice.current.model.hasPrefix("iPad") {
             shareController.popoverPresentationController?.sourceView = view
             shareController.popoverPresentationController?.sourceRect = CGRect(
@@ -169,7 +175,15 @@ extension RSViewController: UITableViewDelegate {
         case .file:
             share(file: item.path)
         case .directory:
-            loadFiles(path: item.path)
+            let alert = UIAlertController(title: "Choose", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Open", style: .default, handler: { [weak self] _ in
+                self?.loadFiles(path: item.path)
+            }))
+            alert.addAction(UIAlertAction(title: "Share", style: .default, handler: { [weak self] _ in
+                self?.share(file: item.path)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(alert, animated: true)
         }
     }
 }
@@ -192,8 +206,31 @@ extension RSViewController: UITableViewDataSource {
         return cell
     }
 }
+class RSDeleteActivity: UIActivity {
+    private var isDeleteSuccess: Bool = false
+    override var activityType: UIActivity.ActivityType? {
+        return UIActivity.ActivityType(rawValue: self.activityTitle!)
+    }
+    override var activityTitle: String? {
+        return "Delete"
+    }
+    override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
+        return true
+    }
+    override func prepare(withActivityItems activityItems: [Any]) {
+        if let url = activityItems.first as? URL {
+            try? FileManager.default.removeItem(at: url)
+            self.isDeleteSuccess = !FileManager.default.fileExists(atPath: url.path)
+        } else {
+            self.isDeleteSuccess = false
+        }
+    }
+    override func perform() {
+        activityDidFinish(self.isDeleteSuccess)
+    }
+}
 open class RAirSandBoxSwift: NSObject {
-  public static let shared = RAirSandBoxSwift()
+    public static let shared = RAirSandBoxSwift()
     var swipeGest: UISwipeGestureRecognizer?
     lazy var window: UIWindow = {
         let window = UIWindow()
@@ -201,10 +238,10 @@ open class RAirSandBoxSwift: NSObject {
         keyFrame.origin.y += 64
         keyFrame.size.height -= 64
         window.frame = keyFrame.insetBy(
-            dx: RAirSandBoxConstant.kASWindowPadding,
-            dy: RAirSandBoxConstant.kASWindowPadding)
+            dx: RAirSandBoxConstant.kRASWindowPadding,
+            dy: RAirSandBoxConstant.kRASWindowPadding)
         window.backgroundColor = .white
-        window.layer.borderColor = RAirSandBoxConstant.kASThemeColor.cgColor
+        window.layer.borderColor = RAirSandBoxConstant.kRASThemeColor.cgColor
         window.layer.borderWidth = 2.0
         window.windowLevel = UIWindow.Level(rawValue: 1000)
         window.rootViewController = viewController

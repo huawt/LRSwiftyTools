@@ -43,11 +43,8 @@ class ViewController: UIViewController, UITextViewDelegate, DispatchExampleProto
         }
         self.view.addSubview(tv)
         
-        
-        DispatchExample.example.add(observer: self)
         DispatchExample.example.add(observer: self)
 //        DispatchExample.example.del(observer: self)
-        
     }
     func example() {
         print("DispatchExample - example")
